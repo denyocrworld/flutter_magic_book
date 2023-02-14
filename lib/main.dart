@@ -27,7 +27,7 @@ class MainApp extends StatelessWidget {
           navigatorKey: Get.navigatorKey,
           debugShowCheckedModeBanner: false,
           theme: value,
-          home: const MainNavigationView(),
+          home: const FbkMainNavigationView(),
           builder: (context, child) => debugView(
             context: context,
             child: child,
