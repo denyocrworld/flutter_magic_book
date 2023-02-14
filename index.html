@@ -1,0 +1,565 @@
+
+export class HtmlMaker {
+    public static getHtml(toolkitUri, stylesUri,bootstrapUri,bootstrapJs, jqueryUri, mainUri) {
+        return `
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="${bootstrapUri}">
+    <link rel="stylesheet" href="${stylesUri}">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"/>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+
+    
+    
+
+    
+    <style>
+    a {
+      text-decoration: none;
+    }
+    </style>
+</head>
+
+<body style="font-size: 12px;">
+
+
+<div class="main">
+
+<div class="row mb-2">
+  <div class="col-md-12">
+  <h6 class="mb-2 mt-2">Flutter Hyper Extension</h6>
+  <div class="mb-2 mt-2">by DenyOcr</div>
+  <div class="p-1">
+    <a href="https://www.youtube.com/channel/UCN2qPsTmvR56QsW89rUv1sg" target="_blank">
+        <img 
+          style="width: 24px;height: 24px;"
+        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABmJLR0QA/wD/AP+gvaeTAAAC4ElEQVRoge2YT0hUQRzHP/PyX1rmJgbSqhhBB7sVGFFRFIR06GKH6GTdN7p4ibAg6hKRREiUBWFFdYkIi7oESZkgXYQoqGjdg6fN1t6qqPvr4Jrre7P5dmffpvA+MPD4zcxvft/9zc6b94OAgICAgIBVjPI6UA5SyzRhoBFFE9AAbAZC6VaTbhXpKWsznqeAyYznn8B4usURYljESBEFoswxqt4TNxIgYLGXUwjHUbQClV7FFogkwgcUD3hLrwLRDdIKkBbK2Mgz4LCvIXpF8QKbo2qYGWeXpZ0Q4hIrJXgAoY1KLuq6XBmQ/VQwxxiwwffAciNBkno1TDLT6M7ALLtYecEDVLOOVqdRt4W2FCGY/Eix1WnSCWguQij54kmAWQauvobmFiMXWREvAhRho0V2HoLejxDphqoC/5Us94+ry8B644VKSqE9Ao++QvtpsPSndR7UOQ06z1WFWo3qWohcg5tDsH23uT+hThxHv24LFU7AAtt2wI0BuPAYNjWYeCqjjbJMg1uA+CAAQCk4cAz6PkHHeSgtz89PnCUT/d1COiqqoKML7o3MC8qVNX9vuEC2u1AxEIHpyeXHObGWXuhKNENs5u/1/jBlw8Mr0HcZZqZznS3Uk8g0uAUobMQHASLwqg96OiE+lq+X3+oJc5kGtwDBztd7Vj4PQ3cERt6ZevrlNGTbQoUhPgZ3uuD5bUilzP0J406TTsCE8UKzM/C0B3rPgZ1YfrxXlJcMCDHvn/oaBvvh+hkY/WLgJAvCD6dJl4FvRot0HjGavgyu2HTvge9+RmCIKzadALMM+IuHDJQwiOa4WgEkmGTIaXQJUG+YAm4VJaRcUPQ4KxKQ7S4U5yzw0u+YcqAfm3O6jn+VFhX7OEmKE/+ttAiDCPcZ4G5OpUUdsocQFmFSNKEIowgjNKKoIUUNEEJRzeInaTmLopPAws1tIt0yC7yjCDEgiiLKLDGvxd2AgICAgIBVzR8UibLdyBYx4AAAAABJRU5ErkJggg==">
+        Youtube
+    </a>
+    </div>
+     <div class="p-1">
+    <a href="https://chat.whatsapp.com/HijFMUeQx8A5fcIj0eJnSB" target="_blank">
+        <img 
+          style="width: 24px;height: 24px;"
+          src="data:image/png;base64,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">
+        Community
+    </a>
+    </div>
+     <div class="p-1">
+    <a href="https://discord.gg/CFBa4QbY" target="_blank">
+        <img 
+          style="width: 24px;height: 24px;"
+          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABmJLR0QA/wD/AP+gvaeTAAAErElEQVRoge2YXWwUVRiGn+/sD6YsJiAqIBQ1EbVV/i6AmABt/I2iGCUNphUoBWMgwVophgtwIjFAgYIYNIZCUdJeNCKicuFPIr1BikE0ERKjiaFYFUUwsjR2y87nxW67s92ZZne7S4juczXnO+c7877nzJw5c6BAgQIFCvyfkWySrDYNhsKUAw+LMkOFu1RYUF8tR9LJ39KsZaIcAH5AOS7Cp4Ewn61aJT2ZasnIwNYmnSg+alWpAkYDZ1A+xPBReDjtVoVE0uln504dFglRpjBf4AngFuACsB+b7auXyZmcGmhs0lG2sAFhORAATqqy6fJZ3ht+O6PlCnMEpgMlCsXAOCAIjIx3cRGIAL8IdKpyCuFkENovdPLniIk8rcpaYBrQK/CWEV55sVr+GrKBbXu1SmE7sRG/KEptj5/DgSiVwLNx4SadgXDBBk4g7I8YWgM2D4ryBjBa4Q+E2vpqac3awJYmfUwMH8eLn6vypggLgfnAsCxFe9EDHFJoNcIKVR4CUJt59cvksFeSpwHLUn9oAqcQJgHfAeeBshyL9uILlBsQJgPfF4coraiQqFtDv1cPoWIqgUnx4j15EDkY5Y6hvbPzEguBFreGgz279TkWNRTWeFW4GtjSrGVAad7kZIowuaFZZ7tVuRoQ5bn8Ksocn/K8WzzlJbbe1qJQgN+B4XlXlQEC3bafm+oXyWVnPGUGRgR4nGtMPIBCkYny6MB4igGFBVdHUuaopmpLMtDWpj7g/qumKHMesCxN0pxU+PkS00jsX9LhS1uYFgxzndhMB47lKaePUUXFTHUGkj5kUSjPYHv6bThEmWMHetJq07mhS3wV/4LmKicJo5QDX/eXnZVimJuuehXWDdw+WxUSUWF9LnNSkGSNyS+xJk/PoPjocAsPg6M5zRmAwBRnud9AY5OOIvZjMST+EXz5zFEo3tii/e9pYgYM92ZyU9PLLLe4KDNzmeOGL5LYXPYbsNN8ifpQ4VWrTYPOmNWmQYENucxxw2cntCZWIeW2TDoBpoTCtDfs1ZXdwumQUEqYXTDoTGaTk4JKQqtzGR2XmX4AZhk4EVJA85qThMDYvmvjiI51bX0Noo7BNo6ol4HTQFeeNblxLn7vVNTNAIzx6KgE5RDKfrKe9IxQhXcRDgIlri3E5RES2OzZpbAC4QrKHIGDgOsP9hCJAu/bhtkCiscPTFzPpsSlg23NWqfK1oFxB6fFpgrDeYXFwJPEzoWyOqIkNtonDHxwJco7fuFG29AicLdne6WuvkZ2uBoAaGzWR2xlD96rkg3sMz7W1y2Wrh279eZeH7MMzFS4Q+HW+CpRBFwfz/kb6Fb4VeAngR9t6AhEOVa7XM5t3q3jfX42oCzC+6ChC6hZvVQ+cQZdR25ji4709/CawFK8D7AiwAFbaFhTLd94tBmUhmadamxeRniK2FGkGz0ITb1B1q2tlIsDKwed+s27dbzx8YLAM7jskwS6xTCjbomcysZA4z4tVZvjGputgXQhtBrD63WLxXMVTOvZtSw1oQncJ1CuwgygRGAMysqXamRfNuL72LZHlyDsUviN2LLZgXIkfJajliX2UPouUKBAgQL/ff4FA2+KbGRpDxIAAAAASUVORK5CYII=">
+        Community
+    </a>
+   
+    </div>
+    <div class="p-1">
+      <a href="https://github.com/denyocrworld/flutter-hyper-ui" target="_blank">
+          <img 
+          style="width: 24px;height: 24px;"
+          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABmJLR0QA/wD/AP+gvaeTAAADTklEQVRoge2ZS0hUURjHf2NmE9nCNHsohoFR4SKKoSBatKtNTwgNV1FQYaugF0RBrSp7QFCTItHDoLK2Qas2LQqCII2ohB6KZBaWPUSdaXHuhZkz555zz9x7J6L5w7fw3HP///93nPPNd85AEUX834hFxBsH5gPlzt+jQD8wFpFeYFQBu4AuoA+YBNJSTAJvnTk7gcq/4lRCAriDWFnZsCnGnHdXFNw1UAfcszBrirtAbaHMtwDfQzTvxjegOUrjJcD5CIzLcYYIiksJcLUA5t3oDDuJcwU078bpsMy3aER6CWc/9AMfFONNQc3XaQzed+aUAhuBp5amx4FLQIPDUwtMSHNGCFiddKXysDS3FDgLpIDnQBI4DrQC+4FTQDcwBAwDaxR67xQ6t/M1n9CYTwP7PN6rMPDGNHNeKHRSwHIvshKN0AGDkTke418N76U1c+YqxmLAQQNnDqowtwfdtqQGVGu0fgOzVC95/Qc2AWUGwfq8bHpjoebZNESh8I1bmCvIyrxs6tGp0bxhQ9SnIUoDHaFZzsZsRE+k0nzjlyRObj2WY1mYriV0eGhOON6MqPcgcGModMvZaNZoL5AnqzZxuWIsEwMBDZrwUfNspjygSmDcIDDDyo49dAuY402VgOkjUgNMt3FkiQbNs2E/BDFEprp9sCGYRy0eemhOoO8csvDag8SNJ0RzJbMa0fuoNF/aEF3xIMmMk2G5dlAFvNLoJW3ItmmIMqMNc8vhB41Aj0GrxYawEvjlM4keYDviPGCLWsRx9adB4wfmNj0H7T4TcOMLcBPYA6wFpio4a4CtwDHgMeobPFW025oHWELuhtoLrEd9cnJjEtjtwVkNPPJp2o0UAVqXLolsFFiFaDdUh/A0cMLAWQG8t0igM1/zICrDoET4DFFCGxFtReazAfw1XE0+zX92PATCFgWxeyAvcxJZijgO+q1IZcAng/kUYr+EgqMS+fUQOB+gT+BICBpZaCN7dXYE5NNVuYsBuZWIIcpfZunrBa4hviWTiIswv0ii/tgcCs+yGusQm0u1cjY/VsgJDCL2W0EwD7hMbteaTwIpRKlUXptEjUWIa/cRx0zC4t0LiEVYHIEva8SBzYhvb7+YEpGXIooo4l/CH+SPSIFr9wg2AAAAAElFTkSuQmCC">
+          Flutter Hyper UI
+      </a>
+    </div>
+    <div class="p-1">
+      <a href="https://javiercbk.github.io/json_to_dart/" target="_blank">
+          <img 
+          style="width: 24px;height: 24px;"
+          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABmJLR0QA/wD/AP+gvaeTAAADfElEQVRoge2Y3WtbdRyHn5OTtGkSkyZt05eFpmPt6jJauhe1TAcqqw6982IXm+CN7sY/QPEv0H/AGxVUNhAvRNhgiopDFGVzy9Y0bUxwTddXs7ZJ06anJyfn/LzILHQdLmmynRbOcxM4Oefz+T78OC/8wMKiJqRHnRD965x4HMVCkj46evDC+7Xm2OoxTLU47H4kId67mXzzw1qzTBEItZ/HYQ/URcKcFZB9hNrfqYuEKQJQPwnTBKA+EqYKQO0SpgtAbRK7QgB2LrFrBGBnErtKALZLPOp8+5MY6kGSdz+oW9auW4FqsQTMxhIwG0vAbPa8wI5eZJ98HEMIwfl3BxECbkczTIwtsa7otLQ6OfHCPoLtTQAkE1miNzLkV1S8vkaOHg/S1+8H4MLn4+glwchrYbq6PAgBX34WB+Cttw9XNEvNKzA+tsS13xcA6A4/xb3MOt9dukNR1ZmazHP1p2kURaM77EVRNH7+cZqpdB6AYtFAVXVGo4ubeaqqo6p6xf01C0zfXQXg5EshRk6H6dnvY0PVmZ1ZI3arPNipV8K8+noPL5/qBiB2e3FrxlSeXHZjR/01fwu5XOWIVCJLMOhm5HR487/ffplDkqAz5AFg3/3f3LK6JcPRIDN6a5GTL4aq7q95BYaOBXG7HaSSOb66OEH0RgZdNwBQFA3ZbkO2lbefZLsNWZZQFG1LxqFIgFQyx8YDx5+IgNfbwBtn+hgcaqNUElz/Y4Erl9MIAeJhW2KStO14ZKAVSYL42FLV/RUJaFr5ZjMMsVku3d/TW7ynUChoDD/fyZmz/fiaG5mbWeOf+QJOp4xeMjCM8kW6ITB0A2eTvCW/0WnjYH8z8djy4xH49eosX3waJ5nIsrpaRAiBy+UA4MrlNN98nUJZ1/B4HLQGy49PRSnhDzgRAuZnCwAszBYQAvx+57aOgaEgxSqePv9R0U0cCntIJbP8eW2Bplh58P29PgAOHfZz83qGS99O0trmJP33CnaHjWC7i8hAC/NzBX74forOLhfzc+sARAZatnX4fA2Ee7ykJ1fqL9Db5yefK5KYWGZttcjTkQDPPNcBwLHjHdhsEonxLJN38vgDTp4d7sDtcXCgtxlNM4iPLjEzXcDjtjN8opMDvc0P7Rk80la1gGm705VypP/i/86457+FLAGzsQTMxhIwG0vAbCwBC4s9zr/ivGPQR1k6awAAAABJRU5ErkJggg==">
+          Json to Dart
+      </a>
+    </div>
+    <div class="p-1">
+      <a href="https://saweria.co/denyocr" target="_blank">
+        <img 
+          style="width: 24px;height: 24px;"
+          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABmJLR0QA/wD/AP+gvaeTAAAEjElEQVRoge2YX2zTVRTHP7f9tSvdOtZ1bGODQIQQiWLYkCGYZWBiBCOI0ch0JkNCDBEfnDwY2ZOJQUmIhAR5gESnhgBq8F+WRZ+o8Q9MymSOBMeGgszBZP9C6Nquv14funal7VjvDdt86Pfpd3/3nHPP95x7zz2/H2SRRRZZzCSEivCmiooyrGbPVDkDYEhb2UmfrzdTeYuKcWGYK9RdUsOoDCutoURASqacgLDIh1XklQiAmnEtKAZJkQCVivLqECgFKaNDvPv59XukZBdg13JKHSGk2PfuFy2NkwlmlIFpdh7AjpC7MhHMdAtNp/Mx5GQipHoG/ndQusik134axKqpcmZslTOiJvRIptKqGehSlFeH5JKKuCIBy9QTEGpBUiQQUYqOJqYwAxbrNGRAKq1hqFkf6Zysul3rc+D1eei47OLmYLT6FrlDPHjfLWpW9DOvODCJR6NKBJSqEID0OvpBFia/D5uCoy3ldP6zgPpt61h4fxX2vPkAhG5d5a+LrTR9eIql86/wwhM9GFaZznq/qAkVTTWBMyCrkp3f9+kilq9aw/raBrA60yubflqOv0976y/seqk7DQm1EgpaF1nqQT7aUh51vm73xM4DWJ1sqGvkoarVHPuuLHVesYSC8hmAaCkdj9y1Pkd02zQ2EEvo8MAQ3544yaULFwFYvHQJ65/dxJzSYkCwobaBt17tpqevn/LEM6FYQkEnA0mLeH0e6reti0d+eGCIA2/vpcN3nmAgSDAQ5ELb7xzas5/hgaGokjWXrS+vxdvmSbauTEA5Ax99U2r76lR+fOxyOni0tjo+/uzjY/hv+1P0Rvx+Pv/kONtf3wGA3VNN84/NnPg+Ly6zsXrQDn8r+aOcgRxjxHuHAQElZSXx8ZXO7gl1r3aOB7h03lwsSau7coM/qPqjTKDuvRuXJQzExjK5jom7FLaEOSnvVJYwUPtO38TsJ4BWO+3IscW/D2QErvdcj8/NX7RwQr0FSxbHn2/09BKR48Ug0aYKtAhYLcbN2POoaXKu1Ref27jlGew5jhSdnFmz2Pzic/Gxr/Us4bCZaPNfLV90lJ5as9Jd5C5YO6fQjcvp5M+ubh7b8DiGYeDKd1G5eiXDg8MMDwxhGAYPVCyj/rXtuD3RCzwwEuDI/kO4Z+dT4vEwp9DN7LzcAz9d+MM7ydIp0LgHICIjl8RYzTcMg9u3/DR9cIRX3tiJEILZhQXU7diaVldKSdPBw5ihELaETAmL0Op0tQhYheiKJHQB+S4XZ39uBaB+53YcjtQtBNHINx08jO/0r3gK3HfMSVNodbpaBKQl3Ik5rioQFLoL+K3VR8f5dp7cvJFllcspnlsMQF9vH+3n2mj5shkzFIo6n1StRrFpEVBu5mJ4c8vT/UBqVxoO4w+MEAyGMM0wAFargd1uw+l0YrOmiZmgf+/xr5W60Bi0MjC2aBeSquTXhmGQn+eCvHRKE0Dqf2tr/1YRGp3jXYxp29L/LyT0Dl06yMgMZEBGIvfu+1ijjY5Bm4BFs26nRcQy/VsoYNrvGQHdEppFFllkMfP4D7CqaZuRGe7hAAAAAElFTkSuQmCC">
+        Donation / Support
+      </a>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+        <ul class="list-group">
+      <li class="list-group-item active group-name project_template" hide-item="true">project_template</li>
+             <li class='list-group-item group-item'>
+        <div style="margin-bottom: 10px;">
+<span style="color: red;">
+Be careful, you should press this button when your project is still empty to avoid unwanted things. Because this command will generate main.dart, setup.dart, riverpod_util.dart and also update your pubspec.yaml
+</span>
+</div>
+      <vscode-button class="title" style="background-color: #2B3E51 !important;color: #FFF !important">setState</vscode-button>
+      <vscode-button class="item create-project" id="setstate_hyper_ui">Hyper UI</vscode-button>
+      <vscode-button class="item create-project" id="setstate">Blank</vscode-button>
+      <vscode-button class="item create-project" id="setstate_freezed">Blank Freezed</vscode-button>
+      <vscode-button class="item create-project" id="setstate_fire">Firebase</vscode-button>
+      <vscode-button class="item create-project" id="setstate_fire_freezed">Firebase Freezed</vscode-button>
+      <vscode-button class="item create-project" id="setstate_goroute_freezed">Web GoRoute Freezed</vscode-button>
+      
+      <vscode-button class="title" style="background-color: #2B3E51 !important;color: #FFF !important">Getx</vscode-button>
+      <vscode-button class="item create-project" id="getx">Blank</vscode-button>
+      <vscode-button class="item create-project" id="getx_freezed">Blank Freezed</vscode-button>
+      <vscode-button class="item create-project" id="getx_fire">Firebase</vscode-button>
+      <vscode-button class="item create-project" id="getx_fire_freezed">Firebase Freezed</vscode-button>
+
+      <vscode-button class="title" style="background-color: #2B3E51 !important;color: #FFF !important">Riverpod</vscode-button>
+      <vscode-button class="item create-project" id="riverpod">Blank</vscode-button>
+      <vscode-button class="item create-project" id="riverpod_freezed">Blank Freezed</vscode-button>
+      <vscode-button class="item create-project" id="riverpod_fire">Firebase</vscode-button>
+      <vscode-button class="item create-project" id="riverpod_fire_freezed">Firebase Freezed</vscode-button>      
+
+      
+      </li>
+      
+    </ul>
+<br/>    <ul class="list-group">
+      <li class="list-group-item active group-name utility" hide-item="true">utility</li>
+             <li class='list-group-item group-item'>
+        <div style="margin-bottom: 10px;">
+<span style="color: red;">
+[Experimental Mode]<br>
+These features are still in experimental mode. We may remove it or replace it with something else.
+</span>
+</div>
+      <vscode-button class="title" style="background-color: #2B3E51 !important;color: #FFF !important">Util</vscode-button>
+      <vscode-button class="item" id="install-vscode-settings-json">.vscode-settings</vscode-button>
+      <vscode-button class="item create_terminal" id="create_terminal_build_runner">Run build_runner</vscode-button>
+      <vscode-button class="item create_terminal" id="create_terminal_firebase">Add Firebase</vscode-button>
+      <vscode-button class="item create_terminal" id="create_terminal_freezed">Add Freezed</vscode-button>
+      
+      <vscode-button class="title" style="background-color: #2B3E51 !important;color: #FFF !important">Install Packages</vscode-button>
+
+      <vscode-button class="item install-package">google_fonts</vscode-button>
+      <vscode-button class="item install-package">geolocator</vscode-button>
+      <vscode-button class="item install-package">permission_handler</vscode-button>
+      <vscode-button class="item install-package">image_picker</vscode-button>
+      <vscode-button class="item install-package">dio</vscode-button>
+      <vscode-button class="item install-package">http</vscode-button>
+      <vscode-button class="item install-package">intl</vscode-button>
+      <vscode-button class="item install-package">path_provider</vscode-button>
+      <vscode-button class="item install-package">freezed</vscode-button>
+      <vscode-button class="item install-package">cached_network_image</vscode-button>
+      <vscode-button class="item install-package">flutter_slidable</vscode-button>
+      <vscode-button class="item install-package">sqflite</vscode-button>
+      <vscode-button class="item install-package">hive</vscode-button>
+
+      <vscode-button class="title" style="background-color: #2B3E51 !important;color: #FFF !important">AndroidManifest</vscode-button>
+      <vscode-button class="item update-android-manifest-permission">INTERNET</vscode-button>
+      <vscode-button class="item update-android-manifest-permission">READ_EXTERNAL_STORAGE</vscode-button>
+      <vscode-button class="item update-android-manifest-permission">WRITE_EXTERNAL_STORAGE</vscode-button>
+      <vscode-button class="item update-android-manifest-permission">ACCESS_BACKGROUND_LOCATION</vscode-button>
+      <vscode-button class="item update-android-manifest-permission">ACCESS_FINE_LOCATION</vscode-button>
+      <vscode-button class="item update-android-manifest-permission">ACCESS_COARSE_LOCATION</vscode-button>
+
+      
+      </li>
+      
+    </ul>
+<br/>    <ul class="list-group">
+      <li class="list-group-item active group-name common" hide-item="true">common</li>
+       <li class='list-group-item group-item'>crostart</li><li class='list-group-item group-item'>croend</li><li class='list-group-item group-item'>crocenter</li><li class='list-group-item group-item'>mainstart</li><li class='list-group-item group-item'>mainend</li><li class='list-group-item group-item'>maincenter</li><li class='list-group-item group-item'>mainspacebetween</li><li class='list-group-item group-item'>mainspacearound</li><li class='list-group-item group-item'>mainspaceevently</li><li class='list-group-item group-item'>axisv</li><li class='list-group-item group-item'>axish</li><li class='list-group-item group-item'>mq</li><li class='list-group-item group-item'>mqs</li><li class='list-group-item group-item'>mqw</li><li class='list-group-item group-item'>mqh</li><li class='list-group-item group-item'>w100</li><li class='list-group-item group-item'>h100</li>
+    </ul>
+<br/>    <ul class="list-group">
+      <li class="list-group-item active group-name margin_padding_sizedbox" hide-item="true">margin_padding_sizedbox</li>
+             <li class='list-group-item group-item'>
+        pa <i class='float-right'>padding: const EdgeInsets.all(n),</i>
+      </li>
+            <li class='list-group-item group-item'>
+        ma <i class='float-right'>margin: const EdgeInsets.all(n),</i>
+      </li>
+            <li class='list-group-item group-item'>
+        p1-p40 <i class='float-right'>Padding n</i>
+      </li>
+            <li class='list-group-item group-item'>
+        pt1-pt40 <i class='float-right'>Padding Top</i>
+      </li>
+            <li class='list-group-item group-item'>
+        pr1-pr40 <i class='float-right'>Padding Right</i>
+      </li>
+            <li class='list-group-item group-item'>
+        pb1-pb40 <i class='float-right'>Padding Bottom</i>
+      </li>
+            <li class='list-group-item group-item'>
+        pl1-pl40 <i class='float-right'>Padding Left</i>
+      </li>
+            <li class='list-group-item group-item'>
+        pv1-pv40 <i class='float-right'>Padding Vertical</i>
+      </li>
+            <li class='list-group-item group-item'>
+        ph1-ph40 <i class='float-right'>Padding Horizontal</i>
+      </li>
+            <li class='list-group-item group-item'>
+        plr1-plr40 <i class='float-right'>Padding Left-Right</i>
+      </li>
+            <li class='list-group-item group-item'>
+        ptb1-ptb40 <i class='float-right'>Padding Top-Bottom</i>
+      </li>
+            <li class='list-group-item group-item'>
+        m1-m40 <i class='float-right'>Margin n</i>
+      </li>
+            <li class='list-group-item group-item'>
+        mt1-mt40 <i class='float-right'>Margin Top</i>
+      </li>
+            <li class='list-group-item group-item'>
+        mr1-mr40 <i class='float-right'>Margin Right</i>
+      </li>
+            <li class='list-group-item group-item'>
+        mb1-mb40 <i class='float-right'>Margin Bottom</i>
+      </li>
+            <li class='list-group-item group-item'>
+        ml1-ml40 <i class='float-right'>Margin Left</i>
+      </li>
+            <li class='list-group-item group-item'>
+        mv1-mv40 <i class='float-right'>Margin Vertical</i>
+      </li>
+            <li class='list-group-item group-item'>
+        mh1-mh40 <i class='float-right'>Margin Horizontal</i>
+      </li>
+            <li class='list-group-item group-item'>
+        mlr1-mlr40 <i class='float-right'>Margin Left-Right</i>
+      </li>
+            <li class='list-group-item group-item'>
+        mtb1-mtb40 <i class='float-right'>Margin Top-Bottom</i>
+      </li>
+            <li class='list-group-item group-item'>
+        sh1-sh40 <i class='float-right'>SizedBox width:</i>
+      </li>
+            <li class='list-group-item group-item'>
+        sw1-sw40 <i class='float-right'>SizedBox height:</i>
+      </li>
+      
+    </ul>
+<br/>    <ul class="list-group">
+      <li class="list-group-item active group-name layout" hide-item="true">layout</li>
+       <li class='list-group-item group-item'>row</li><li class='list-group-item group-item'>row2</li><li class='list-group-item group-item'>row3</li><li class='list-group-item group-item'>rowe2</li><li class='list-group-item group-item'>rowe3</li><li class='list-group-item group-item'>col</li><li class='list-group-item group-item'>col2</li><li class='list-group-item group-item'>col3</li><li class='list-group-item group-item'>cole2</li><li class='list-group-item group-item'>cole3</li><li class='list-group-item group-item'>streambuilder</li><li class='list-group-item group-item'>layout_builder</li><li class='list-group-item group-item'>orientation_builder</li>
+    </ul>
+<br/>    <ul class="list-group">
+      <li class="list-group-item active group-name grid" hide-item="true">grid</li>
+       
+    </ul>
+<br/>    <ul class="list-group">
+      <li class="list-group-item active group-name widget" hide-item="true">widget</li>
+       
+    </ul>
+<br/>    <ul class="list-group">
+      <li class="list-group-item active group-name wrap" hide-item="true">wrap</li>
+             <li class='list-group-item group-item'>
+        Wrap with InkWell <b class='float-right'>Alt+I</b>
+      </li>
+            <li class='list-group-item group-item'>
+        Wrap with Expanded - <b class='float-right'>Alt+E</b>
+      </li>
+            <li class='list-group-item group-item'>
+        Wrap with Padding - <b class='float-right'>Alt+P</b>
+      </li>
+            <li class='list-group-item group-item'>
+        Wrap with Container - <b class='float-right'>Alt+C</b>
+      </li>
+            <li class='list-group-item group-item'>
+        Wrap with SingleChildScrollView - <b class='float-right'>Alt+Shift+S</b>
+      </li>
+            <li class='list-group-item group-item'>
+        Wrap with ListView Vertical - <b class='float-right'>Alt+Shift+V</b>
+      </li>
+            <li class='list-group-item group-item'>
+        Wrap with ListView Horizontal - <b class='float-right'>Alt+Shift+H</b>
+      </li>
+            <li class='list-group-item group-item'>
+        Wrap in StreamBuilder Item List - <b class='float-right'>Alt+Shift+Q</b>
+      </li>
+            <li class='list-group-item group-item'>
+        Wrap in StreamBuilder Item Horizontal List - <b class='float-right'>Alt+Shift+W</b>
+      </li>
+      
+    </ul>
+<br/>    <ul class="list-group">
+      <li class="list-group-item active group-name container" hide-item="true">container</li>
+       <li class='list-group-item group-item'>con</li><li class='list-group-item group-item'>conf</li><li class='list-group-item group-item'>contrad</li><li class='list-group-item group-item'>conimage</li><li class='list-group-item group-item'>confav</li><li class='list-group-item group-item'>conproduct</li><li class='list-group-item group-item'>decoration</li><li class='list-group-item group-item'>border</li><li class='list-group-item group-item'>radius</li><li class='list-group-item group-item'>shadow</li><li class='list-group-item group-item'>decoration_image</li><li class='list-group-item group-item'>gradient</li>
+    </ul>
+<br/>    <ul class="list-group">
+      <li class="list-group-item active group-name shape" hide-item="true">shape</li>
+       <li class='list-group-item group-item'>shape_rounded_rectangle</li><li class='list-group-item group-item'>shape_beveled_rectangle</li><li class='list-group-item group-item'>shape_stadium</li><li class='list-group-item group-item'>shape_continuous_rectangle</li>
+    </ul>
+<br/>    <ul class="list-group">
+      <li class="list-group-item active group-name text" hide-item="true">text</li>
+             <li class='list-group-item group-item'>
+        texts <i class='float-right'>Text with TextStyle</i>
+      </li>
+            <li class='list-group-item group-item'>
+        text1-text40 <i class='float-right'>Text with FontSize</i>
+      </li>
+            <li class='list-group-item group-item'>
+        textb1-textb40 <i class='float-right'>Text with FontSize & Bold</i>
+      </li>
+            <li class='list-group-item group-item'>
+        fs1-fs40 <i class='float-right'>fontSize</i>
+      </li>
+            <li class='list-group-item group-item'>
+        bold <i class='float-right'>fontWeight: bold</i>
+      </li>
+            <li class='list-group-item group-item'>
+        cwhite <i class='float-right'>color: Colors.white</i>
+      </li>
+            <li class='list-group-item group-item'>
+        cblack <i class='float-right'>color: Colors.black</i>
+      </li>
+            <li class='list-group-item group-item'>
+        cgrey <i class='float-right'>color: Colors.grey</i>
+      </li>
+      
+    </ul>
+<br/>    <ul class="list-group">
+      <li class="list-group-item active group-name heading" hide-item="true">heading</li>
+       <li class='list-group-item group-item'>h1</li><li class='list-group-item group-item'>h2</li><li class='list-group-item group-item'>h3</li><li class='list-group-item group-item'>h4</li><li class='list-group-item group-item'>h5</li><li class='list-group-item group-item'>h6</li>
+    </ul>
+<br/>    <ul class="list-group">
+      <li class="list-group-item active group-name button" hide-item="true">button</li>
+       <li class='list-group-item group-item'>button</li><li class='list-group-item group-item'>button_stadium</li><li class='list-group-item group-item'>button_radius</li><li class='list-group-item group-item'>button_continuous</li><li class='list-group-item group-item'>button_beveled</li><li class='list-group-item group-item'>button_outline</li><li class='list-group-item group-item'>button_outline_stadium</li><li class='list-group-item group-item'>button_outline_radius</li><li class='list-group-item group-item'>button_outline_continuous</li><li class='list-group-item group-item'>button_outline_beveled</li><li class='list-group-item group-item'>button_icon</li><li class='list-group-item group-item'>button_icon_stadium</li><li class='list-group-item group-item'>button_icon_radius</li><li class='list-group-item group-item'>button_icon_continuous</li><li class='list-group-item group-item'>button_icon_beveled</li><li class='list-group-item group-item'>button_icon_outline</li><li class='list-group-item group-item'>button_icon_outline_stadium</li><li class='list-group-item group-item'>button_icon_outline_continuous</li><li class='list-group-item group-item'>button_icon_outline_radius</li><li class='list-group-item group-item'>button_icon_outline_beveled</li><li class='list-group-item group-item'>button_text</li><li class='list-group-item group-item'>button_text_icon</li><li class='list-group-item group-item'>buttonf</li><li class='list-group-item group-item'>button_icon_vertical</li><li class='list-group-item group-item'>floating_action_button</li><li class='list-group-item group-item'>link</li><li class='list-group-item group-item'>link_button</li><li class='list-group-item group-item'>link_button_icon</li><li class='list-group-item group-item'>link_icon</li><li class='list-group-item group-item'>list_tile</li><li class='list-group-item group-item'>list_tile_row</li><li class='list-group-item group-item'>list_tile_row_icon</li><li class='list-group-item group-item'>card_tile</li><li class='list-group-item group-item'>card_cart</li>
+    </ul>
+<br/>    <ul class="list-group">
+      <li class="list-group-item active group-name image" hide-item="true">image</li>
+       
+    </ul>
+<br/>    <ul class="list-group">
+      <li class="list-group-item active group-name icon" hide-item="true">icon</li>
+       
+    </ul>
+<br/>    <ul class="list-group">
+      <li class="list-group-item active group-name circle_avatar" hide-item="true">circle_avatar</li>
+       
+    </ul>
+<br/>    <ul class="list-group">
+      <li class="list-group-item active group-name textfield" hide-item="true">textfield</li>
+       <li class='list-group-item group-item'>textfield</li><li class='list-group-item group-item'>textfield_icon</li><li class='list-group-item group-item'>textfield_email</li><li class='list-group-item group-item'>textfield_password</li><li class='list-group-item group-item'>textfield_radius</li><li class='list-group-item group-item'>textfield_search1</li><li class='list-group-item group-item'>textfield_search2</li><li class='list-group-item group-item'>textfield_search3</li><li class='list-group-item group-item'>textfield_autocomplete</li><li class='list-group-item group-item'>textfield_autocomplete_radius</li><li class='list-group-item group-item'>textfield_autocomplete_people</li>
+    </ul>
+<br/>    <ul class="list-group">
+      <li class="list-group-item active group-name list_horizontal" hide-item="true">list_horizontal</li>
+       
+    </ul>
+<br/>    <ul class="list-group">
+      <li class="list-group-item active group-name list_vertical" hide-item="true">list_vertical</li>
+       
+    </ul>
+<br/>    <ul class="list-group">
+      <li class="list-group-item active group-name list_item" hide-item="true">list_item</li>
+       <li class='list-group-item group-item'>item_card</li><li class='list-group-item group-item'>item_cart</li><li class='list-group-item group-item'>item_social_facebook</li><li class='list-group-item group-item'>item_welcome</li><li class='list-group-item group-item'>item_product_vertical</li><li class='list-group-item group-item'>item_product_row</li><li class='list-group-item group-item'>item_product</li><li class='list-group-item group-item'>item_statistic_balance</li><li class='list-group-item group-item'>item_statistic_customers</li><li class='list-group-item group-item'>item_statistic_orders</li><li class='list-group-item group-item'>item_statistic_progress</li><li class='list-group-item group-item'>item_travel</li><li class='list-group-item group-item'>item_blog</li><li class='list-group-item group-item'>item_blog2</li><li class='list-group-item group-item'>item_food</li><li class='list-group-item group-item'>map_fluttermap</li><li class='list-group-item group-item'>menubar</li><li class='list-group-item group-item'>navpush</li><li class='list-group-item group-item'>navreplace</li><li class='list-group-item group-item'>navback</li>
+    </ul>
+<br/>    <ul class="list-group">
+      <li class="list-group-item active group-name firebase" hide-item="true">firebase</li>
+       
+    </ul>
+<br/>    <ul class="list-group">
+      <li class="list-group-item active group-name general_shortcode" hide-item="true">general_shortcode</li>
+       
+    </ul>
+<br/>    <ul class="list-group">
+      <li class="list-group-item active group-name class" hide-item="true">class</li>
+       <li class='list-group-item group-item'>class_validator</li><li class='list-group-item group-item'>reuseable</li><li class='list-group-item group-item'>stfl</li><li class='list-group-item group-item'>stss</li><li class='list-group-item group-item'>class_responsive</li>
+    </ul>
+<br/>    <ul class="list-group">
+      <li class="list-group-item active group-name import" hide-item="true">import</li>
+       <li class='list-group-item group-item'>mat</li><li class='list-group-item group-item'>cup</li>
+    </ul>
+<br/>    <ul class="list-group">
+      <li class="list-group-item active group-name dummy_util" hide-item="true">dummy_util</li>
+       
+    </ul>
+<br/>    <ul class="list-group">
+      <li class="list-group-item active group-name scaffold" hide-item="true">scaffold</li>
+       <li class='list-group-item group-item'>scaffold</li><li class='list-group-item group-item'>scaffoldc</li><li class='list-group-item group-item'>scaffold_bottom_navigation_bar</li><li class='list-group-item group-item'>scaffold_drawer</li><li class='list-group-item group-item'>scaffold_image</li><li class='list-group-item group-item'>scaffold_menubar</li><li class='list-group-item group-item'>scaffold_ovo</li><li class='list-group-item group-item'>scaffold_simple</li><li class='list-group-item group-item'>scaffold_sliver_appbar</li><li class='list-group-item group-item'>scaffold_tabbar_horizontal</li><li class='list-group-item group-item'>wrap</li><li class='list-group-item group-item'>wrap_category</li><li class='list-group-item group-item'>wrap_product</li>
+    </ul>
+<br/>    <ul class="list-group">
+      <li class="list-group-item active group-name menu" hide-item="true">menu</li>
+       <li class='list-group-item group-item'>menu_horizontal</li><li class='list-group-item group-item'>menu_basic</li><li class='list-group-item group-item'>menu_image</li>
+    </ul>
+<br/>    <ul class="list-group">
+      <li class="list-group-item active group-name banner" hide-item="true">banner</li>
+       <li class='list-group-item group-item'>banner</li><li class='list-group-item group-item'>banner_image_text</li><li class='list-group-item group-item'>banner_horizontal</li>
+    </ul>
+<br/>    <ul class="list-group">
+      <li class="list-group-item active group-name navigation_ui" hide-item="true">navigation_ui</li>
+       <li class='list-group-item group-item'>nav_vertical</li><li class='list-group-item group-item'>nav_vertical_icon</li><li class='list-group-item group-item'>nav_basic_drawer</li><li class='list-group-item group-item'>nav_basic</li><li class='list-group-item group-item'>nav_float</li><li class='list-group-item group-item'>navigation_gojek</li>
+    </ul>
+<br/>    <ul class="list-group">
+      <li class="list-group-item active group-name flutter_hyper_ui" hide-item="true">flutter_hyper_ui</li>
+       <li class='list-group-item group-item'>s_btn</li><li class='list-group-item group-item'>s_text</li><li class='list-group-item group-item'>s_btn_icon</li><li class='list-group-item group-item'>f_btn</li><li class='list-group-item group-item'>f_text</li><li class='list-group-item group-item'>f_password</li><li class='list-group-item group-item'>f_number</li><li class='list-group-item group-item'>f_datepicker</li><li class='list-group-item group-item'>f_timepicker</li><li class='list-group-item group-item'>f_text_area</li><li class='list-group-item group-item'>f_autocomplete_remote</li><li class='list-group-item group-item'>f_combo</li><li class='list-group-item group-item'>f_radio</li><li class='list-group-item group-item'>f_switch</li><li class='list-group-item group-item'>f_check</li><li class='list-group-item group-item'>f_image</li><li class='list-group-item group-item'>f_location</li><li class='list-group-item group-item'>f_rating</li>
+    </ul>
+<br/>    <ul class="list-group">
+      <li class="list-group-item active group-name future" hide-item="true">future</li>
+       <li class='list-group-item group-item'>future</li><li class='list-group-item group-item'>future_example</li><li class='list-group-item group-item'>future_woocommerce_products_example</li>
+    </ul>
+<br/>    <ul class="list-group">
+      <li class="list-group-item active group-name view" hide-item="true">view</li>
+       <li class='list-group-item group-item'>ui_chat_detail</li><li class='list-group-item group-item'>ui_chat_list</li><li class='list-group-item group-item'>ui_create_post_social</li><li class='list-group-item group-item'>ui_dashboard_food_delivery</li><li class='list-group-item group-item'>ui_dashboard_grocery</li><li class='list-group-item group-item'>ui_dashboard_ovo</li><li class='list-group-item group-item'>ui_dashboard_social</li><li class='list-group-item group-item'>ui_dashboard_travel</li><li class='list-group-item group-item'>ui_login</li><li class='list-group-item group-item'>ui_login_social</li><li class='list-group-item group-item'>ui_product_detail_basic</li><li class='list-group-item group-item'>ui_profile_basic</li><li class='list-group-item group-item'>ui_profile_elearning</li><li class='list-group-item group-item'>ui_signup</li><li class='list-group-item group-item'>ui_welcome</li><li class='list-group-item group-item'>ui_splash</li>
+    </ul>
+<br/>    <ul class="list-group">
+      <li class="list-group-item active group-name carousel" hide-item="true">carousel</li>
+       <li class='list-group-item group-item'>carousel</li><li class='list-group-item group-item'>carousel_indicator</li><li class='list-group-item group-item'>carousel_indicator2</li>
+    </ul>
+<br/>    <ul class="list-group">
+      <li class="list-group-item active group-name chart" hide-item="true">chart</li>
+       <li class='list-group-item group-item'>snippet</li><li class='list-group-item group-item'>chart_line</li><li class='list-group-item group-item'>chart_spline</li><li class='list-group-item group-item'>chart_bar_horizontal</li><li class='list-group-item group-item'>chart_bar_vertical</li><li class='list-group-item group-item'>chart_scatter</li><li class='list-group-item group-item'>chart_area</li><li class='list-group-item group-item'>chart_bubble</li><li class='list-group-item group-item'>chart_step_line</li><li class='list-group-item group-item'>chart_pie</li><li class='list-group-item group-item'>circle</li><li class='list-group-item group-item'>circle_image_lg</li><li class='list-group-item group-item'>circle_image_md</li><li class='list-group-item group-item'>circle_image</li><li class='list-group-item group-item'>circle_image_sm</li><li class='list-group-item group-item'>circle_image_xs</li><li class='list-group-item group-item'>circle_icon_lg</li><li class='list-group-item group-item'>circle_icon_md</li><li class='list-group-item group-item'>circle_icon</li><li class='list-group-item group-item'>circle_icon_sm</li><li class='list-group-item group-item'>circle_icon_xs</li><li class='list-group-item group-item'>item</li><li class='list-group-item group-item'>cl</li><li class='list-group-item group-item'>srcNoImage</li><li class='list-group-item group-item'>srcPicSum</li><li class='list-group-item group-item'>srcMeImage</li><li class='list-group-item group-item'>lorem</li>
+    </ul>
+<br/>    <ul class="list-group">
+      <li class="list-group-item active group-name colors" hide-item="true">colors</li>
+       <li class='list-group-item group-item'>cWhite</li><li class='list-group-item group-item'>cBlack</li><li class='list-group-item group-item'>cBlack12</li><li class='list-group-item group-item'>cBlack26</li><li class='list-group-item group-item'>cBlack38</li><li class='list-group-item group-item'>cBlack45</li><li class='list-group-item group-item'>cBlack54</li><li class='list-group-item group-item'>cBlack87</li><li class='list-group-item group-item'>cTransparent</li><li class='list-group-item group-item'>bcWhite</li><li class='list-group-item group-item'>bcBlack</li><li class='list-group-item group-item'>bcBlack12</li><li class='list-group-item group-item'>bcBlack26</li><li class='list-group-item group-item'>bcBlack38</li><li class='list-group-item group-item'>bcBlack45</li><li class='list-group-item group-item'>bcBlack54</li><li class='list-group-item group-item'>bcBlack87</li><li class='list-group-item group-item'>bcTransparent</li><li class='list-group-item group-item'>cPink</li><li class='list-group-item group-item'>bcPink</li><li class='list-group-item group-item'>cPink50</li><li class='list-group-item group-item'>bcPink50</li><li class='list-group-item group-item'>cPink100</li><li class='list-group-item group-item'>bcPink100</li><li class='list-group-item group-item'>cPink200</li><li class='list-group-item group-item'>bcPink200</li><li class='list-group-item group-item'>cPink300</li><li class='list-group-item group-item'>bcPink300</li><li class='list-group-item group-item'>cPink400</li><li class='list-group-item group-item'>bcPink400</li><li class='list-group-item group-item'>cPink500</li><li class='list-group-item group-item'>bcPink500</li><li class='list-group-item group-item'>cPink600</li><li class='list-group-item group-item'>bcPink600</li><li class='list-group-item group-item'>cPink700</li><li class='list-group-item group-item'>bcPink700</li><li class='list-group-item group-item'>cPink800</li><li class='list-group-item group-item'>bcPink800</li><li class='list-group-item group-item'>cPink900</li><li class='list-group-item group-item'>bcPink900</li><li class='list-group-item group-item'>cRed</li><li class='list-group-item group-item'>bcRed</li><li class='list-group-item group-item'>cRed50</li><li class='list-group-item group-item'>bcRed50</li><li class='list-group-item group-item'>cRed100</li><li class='list-group-item group-item'>bcRed100</li><li class='list-group-item group-item'>cRed200</li><li class='list-group-item group-item'>bcRed200</li><li class='list-group-item group-item'>cRed300</li><li class='list-group-item group-item'>bcRed300</li><li class='list-group-item group-item'>cRed400</li><li class='list-group-item group-item'>bcRed400</li><li class='list-group-item group-item'>cRed500</li><li class='list-group-item group-item'>bcRed500</li><li class='list-group-item group-item'>cRed600</li><li class='list-group-item group-item'>bcRed600</li><li class='list-group-item group-item'>cRed700</li><li class='list-group-item group-item'>bcRed700</li><li class='list-group-item group-item'>cRed800</li><li class='list-group-item group-item'>bcRed800</li><li class='list-group-item group-item'>cRed900</li><li class='list-group-item group-item'>bcRed900</li><li class='list-group-item group-item'>cDeepOrange</li><li class='list-group-item group-item'>bcDeepOrange</li><li class='list-group-item group-item'>cDeepOrange50</li><li class='list-group-item group-item'>bcDeepOrange50</li><li class='list-group-item group-item'>cDeepOrange100</li><li class='list-group-item group-item'>bcDeepOrange100</li><li class='list-group-item group-item'>cDeepOrange200</li><li class='list-group-item group-item'>bcDeepOrange200</li><li class='list-group-item group-item'>cDeepOrange300</li><li class='list-group-item group-item'>bcDeepOrange300</li><li class='list-group-item group-item'>cDeepOrange400</li><li class='list-group-item group-item'>bcDeepOrange400</li><li class='list-group-item group-item'>cDeepOrange500</li><li class='list-group-item group-item'>bcDeepOrange500</li><li class='list-group-item group-item'>cDeepOrange600</li><li class='list-group-item group-item'>bcDeepOrange600</li><li class='list-group-item group-item'>cDeepOrange700</li><li class='list-group-item group-item'>bcDeepOrange700</li><li class='list-group-item group-item'>cDeepOrange800</li><li class='list-group-item group-item'>bcDeepOrange800</li><li class='list-group-item group-item'>cDeepOrange900</li><li class='list-group-item group-item'>bcDeepOrange900</li><li class='list-group-item group-item'>cOrange</li><li class='list-group-item group-item'>bcOrange</li><li class='list-group-item group-item'>cOrange50</li><li class='list-group-item group-item'>bcOrange50</li><li class='list-group-item group-item'>cOrange100</li><li class='list-group-item group-item'>bcOrange100</li><li class='list-group-item group-item'>cOrange200</li><li class='list-group-item group-item'>bcOrange200</li><li class='list-group-item group-item'>cOrange300</li><li class='list-group-item group-item'>bcOrange300</li><li class='list-group-item group-item'>cOrange400</li><li class='list-group-item group-item'>bcOrange400</li><li class='list-group-item group-item'>cOrange500</li><li class='list-group-item group-item'>bcOrange500</li><li class='list-group-item group-item'>cOrange600</li><li class='list-group-item group-item'>bcOrange600</li><li class='list-group-item group-item'>cOrange700</li><li class='list-group-item group-item'>bcOrange700</li><li class='list-group-item group-item'>cOrange800</li><li class='list-group-item group-item'>bcOrange800</li><li class='list-group-item group-item'>cOrange900</li><li class='list-group-item group-item'>bcOrange900</li><li class='list-group-item group-item'>cAmber</li><li class='list-group-item group-item'>bcAmber</li><li class='list-group-item group-item'>cAmber50</li><li class='list-group-item group-item'>bcAmber50</li><li class='list-group-item group-item'>cAmber100</li><li class='list-group-item group-item'>bcAmber100</li><li class='list-group-item group-item'>cAmber200</li><li class='list-group-item group-item'>bcAmber200</li><li class='list-group-item group-item'>cAmber300</li><li class='list-group-item group-item'>bcAmber300</li><li class='list-group-item group-item'>cAmber400</li><li class='list-group-item group-item'>bcAmber400</li><li class='list-group-item group-item'>cAmber500</li><li class='list-group-item group-item'>bcAmber500</li><li class='list-group-item group-item'>cAmber600</li><li class='list-group-item group-item'>bcAmber600</li><li class='list-group-item group-item'>cAmber700</li><li class='list-group-item group-item'>bcAmber700</li><li class='list-group-item group-item'>cAmber800</li><li class='list-group-item group-item'>bcAmber800</li><li class='list-group-item group-item'>cAmber900</li><li class='list-group-item group-item'>bcAmber900</li><li class='list-group-item group-item'>cYellow</li><li class='list-group-item group-item'>bcYellow</li><li class='list-group-item group-item'>cYellow50</li><li class='list-group-item group-item'>bcYellow50</li><li class='list-group-item group-item'>cYellow100</li><li class='list-group-item group-item'>bcYellow100</li><li class='list-group-item group-item'>cYellow200</li><li class='list-group-item group-item'>bcYellow200</li><li class='list-group-item group-item'>cYellow300</li><li class='list-group-item group-item'>bcYellow300</li><li class='list-group-item group-item'>cYellow400</li><li class='list-group-item group-item'>bcYellow400</li><li class='list-group-item group-item'>cYellow500</li><li class='list-group-item group-item'>bcYellow500</li><li class='list-group-item group-item'>cYellow600</li><li class='list-group-item group-item'>bcYellow600</li><li class='list-group-item group-item'>cYellow700</li><li class='list-group-item group-item'>bcYellow700</li><li class='list-group-item group-item'>cYellow800</li><li class='list-group-item group-item'>bcYellow800</li><li class='list-group-item group-item'>cYellow900</li><li class='list-group-item group-item'>bcYellow900</li><li class='list-group-item group-item'>cLime</li><li class='list-group-item group-item'>bcLime</li><li class='list-group-item group-item'>cLime50</li><li class='list-group-item group-item'>bcLime50</li><li class='list-group-item group-item'>cLime100</li><li class='list-group-item group-item'>bcLime100</li><li class='list-group-item group-item'>cLime200</li><li class='list-group-item group-item'>bcLime200</li><li class='list-group-item group-item'>cLime300</li><li class='list-group-item group-item'>bcLime300</li><li class='list-group-item group-item'>cLime400</li><li class='list-group-item group-item'>bcLime400</li><li class='list-group-item group-item'>cLime500</li><li class='list-group-item group-item'>bcLime500</li><li class='list-group-item group-item'>cLime600</li><li class='list-group-item group-item'>bcLime600</li><li class='list-group-item group-item'>cLime700</li><li class='list-group-item group-item'>bcLime700</li><li class='list-group-item group-item'>cLime800</li><li class='list-group-item group-item'>bcLime800</li><li class='list-group-item group-item'>cLime900</li><li class='list-group-item group-item'>bcLime900</li><li class='list-group-item group-item'>cLightGreen</li><li class='list-group-item group-item'>bcLightGreen</li><li class='list-group-item group-item'>cLightGreen50</li><li class='list-group-item group-item'>bcLightGreen50</li><li class='list-group-item group-item'>cLightGreen100</li><li class='list-group-item group-item'>bcLightGreen100</li><li class='list-group-item group-item'>cLightGreen200</li><li class='list-group-item group-item'>bcLightGreen200</li><li class='list-group-item group-item'>cLightGreen300</li><li class='list-group-item group-item'>bcLightGreen300</li><li class='list-group-item group-item'>cLightGreen400</li><li class='list-group-item group-item'>bcLightGreen400</li><li class='list-group-item group-item'>cLightGreen500</li><li class='list-group-item group-item'>bcLightGreen500</li><li class='list-group-item group-item'>cLightGreen600</li><li class='list-group-item group-item'>bcLightGreen600</li><li class='list-group-item group-item'>cLightGreen700</li><li class='list-group-item group-item'>bcLightGreen700</li><li class='list-group-item group-item'>cLightGreen800</li><li class='list-group-item group-item'>bcLightGreen800</li><li class='list-group-item group-item'>cLightGreen900</li><li class='list-group-item group-item'>bcLightGreen900</li><li class='list-group-item group-item'>cGreen</li><li class='list-group-item group-item'>bcGreen</li><li class='list-group-item group-item'>cGreen50</li><li class='list-group-item group-item'>bcGreen50</li><li class='list-group-item group-item'>cGreen100</li><li class='list-group-item group-item'>bcGreen100</li><li class='list-group-item group-item'>cGreen200</li><li class='list-group-item group-item'>bcGreen200</li><li class='list-group-item group-item'>cGreen300</li><li class='list-group-item group-item'>bcGreen300</li><li class='list-group-item group-item'>cGreen400</li><li class='list-group-item group-item'>bcGreen400</li><li class='list-group-item group-item'>cGreen500</li><li class='list-group-item group-item'>bcGreen500</li><li class='list-group-item group-item'>cGreen600</li><li class='list-group-item group-item'>bcGreen600</li><li class='list-group-item group-item'>cGreen700</li><li class='list-group-item group-item'>bcGreen700</li><li class='list-group-item group-item'>cGreen800</li><li class='list-group-item group-item'>bcGreen800</li><li class='list-group-item group-item'>cGreen900</li><li class='list-group-item group-item'>bcGreen900</li><li class='list-group-item group-item'>cCyan</li><li class='list-group-item group-item'>bcCyan</li><li class='list-group-item group-item'>cCyan50</li><li class='list-group-item group-item'>bcCyan50</li><li class='list-group-item group-item'>cCyan100</li><li class='list-group-item group-item'>bcCyan100</li><li class='list-group-item group-item'>cCyan200</li><li class='list-group-item group-item'>bcCyan200</li><li class='list-group-item group-item'>cCyan300</li><li class='list-group-item group-item'>bcCyan300</li><li class='list-group-item group-item'>cCyan400</li><li class='list-group-item group-item'>bcCyan400</li><li class='list-group-item group-item'>cCyan500</li><li class='list-group-item group-item'>bcCyan500</li><li class='list-group-item group-item'>cCyan600</li><li class='list-group-item group-item'>bcCyan600</li><li class='list-group-item group-item'>cCyan700</li><li class='list-group-item group-item'>bcCyan700</li><li class='list-group-item group-item'>cCyan800</li><li class='list-group-item group-item'>bcCyan800</li><li class='list-group-item group-item'>cCyan900</li><li class='list-group-item group-item'>bcCyan900</li><li class='list-group-item group-item'>cLightBlue</li><li class='list-group-item group-item'>bcLightBlue</li><li class='list-group-item group-item'>cLightBlue50</li><li class='list-group-item group-item'>bcLightBlue50</li><li class='list-group-item group-item'>cLightBlue100</li><li class='list-group-item group-item'>bcLightBlue100</li><li class='list-group-item group-item'>cLightBlue200</li><li class='list-group-item group-item'>bcLightBlue200</li><li class='list-group-item group-item'>cLightBlue300</li><li class='list-group-item group-item'>bcLightBlue300</li><li class='list-group-item group-item'>cLightBlue400</li><li class='list-group-item group-item'>bcLightBlue400</li><li class='list-group-item group-item'>cLightBlue500</li><li class='list-group-item group-item'>bcLightBlue500</li><li class='list-group-item group-item'>cLightBlue600</li><li class='list-group-item group-item'>bcLightBlue600</li><li class='list-group-item group-item'>cLightBlue700</li><li class='list-group-item group-item'>bcLightBlue700</li><li class='list-group-item group-item'>cLightBlue800</li><li class='list-group-item group-item'>bcLightBlue800</li><li class='list-group-item group-item'>cLightBlue900</li><li class='list-group-item group-item'>bcLightBlue900</li><li class='list-group-item group-item'>cBlue</li><li class='list-group-item group-item'>bcBlue</li><li class='list-group-item group-item'>cBlue50</li><li class='list-group-item group-item'>bcBlue50</li><li class='list-group-item group-item'>cBlue100</li><li class='list-group-item group-item'>bcBlue100</li><li class='list-group-item group-item'>cBlue200</li><li class='list-group-item group-item'>bcBlue200</li><li class='list-group-item group-item'>cBlue300</li><li class='list-group-item group-item'>bcBlue300</li><li class='list-group-item group-item'>cBlue400</li><li class='list-group-item group-item'>bcBlue400</li><li class='list-group-item group-item'>cBlue500</li><li class='list-group-item group-item'>bcBlue500</li><li class='list-group-item group-item'>cBlue600</li><li class='list-group-item group-item'>bcBlue600</li><li class='list-group-item group-item'>cBlue700</li><li class='list-group-item group-item'>bcBlue700</li><li class='list-group-item group-item'>cBlue800</li><li class='list-group-item group-item'>bcBlue800</li><li class='list-group-item group-item'>cBlue900</li><li class='list-group-item group-item'>bcBlue900</li><li class='list-group-item group-item'>cIndigo</li><li class='list-group-item group-item'>bcIndigo</li><li class='list-group-item group-item'>cIndigo50</li><li class='list-group-item group-item'>bcIndigo50</li><li class='list-group-item group-item'>cIndigo100</li><li class='list-group-item group-item'>bcIndigo100</li><li class='list-group-item group-item'>cIndigo200</li><li class='list-group-item group-item'>bcIndigo200</li><li class='list-group-item group-item'>cIndigo300</li><li class='list-group-item group-item'>bcIndigo300</li><li class='list-group-item group-item'>cIndigo400</li><li class='list-group-item group-item'>bcIndigo400</li><li class='list-group-item group-item'>cIndigo500</li><li class='list-group-item group-item'>bcIndigo500</li><li class='list-group-item group-item'>cIndigo600</li><li class='list-group-item group-item'>bcIndigo600</li><li class='list-group-item group-item'>cIndigo700</li><li class='list-group-item group-item'>bcIndigo700</li><li class='list-group-item group-item'>cIndigo800</li><li class='list-group-item group-item'>bcIndigo800</li><li class='list-group-item group-item'>cIndigo900</li><li class='list-group-item group-item'>bcIndigo900</li><li class='list-group-item group-item'>cPurple</li><li class='list-group-item group-item'>bcPurple</li><li class='list-group-item group-item'>cPurple50</li><li class='list-group-item group-item'>bcPurple50</li><li class='list-group-item group-item'>cPurple100</li><li class='list-group-item group-item'>bcPurple100</li><li class='list-group-item group-item'>cPurple200</li><li class='list-group-item group-item'>bcPurple200</li><li class='list-group-item group-item'>cPurple300</li><li class='list-group-item group-item'>bcPurple300</li><li class='list-group-item group-item'>cPurple400</li><li class='list-group-item group-item'>bcPurple400</li><li class='list-group-item group-item'>cPurple500</li><li class='list-group-item group-item'>bcPurple500</li><li class='list-group-item group-item'>cPurple600</li><li class='list-group-item group-item'>bcPurple600</li><li class='list-group-item group-item'>cPurple700</li><li class='list-group-item group-item'>bcPurple700</li><li class='list-group-item group-item'>cPurple800</li><li class='list-group-item group-item'>bcPurple800</li><li class='list-group-item group-item'>cPurple900</li><li class='list-group-item group-item'>bcPurple900</li><li class='list-group-item group-item'>cDeepPurple</li><li class='list-group-item group-item'>bcDeepPurple</li><li class='list-group-item group-item'>cDeepPurple50</li><li class='list-group-item group-item'>bcDeepPurple50</li><li class='list-group-item group-item'>cDeepPurple100</li><li class='list-group-item group-item'>bcDeepPurple100</li><li class='list-group-item group-item'>cDeepPurple200</li><li class='list-group-item group-item'>bcDeepPurple200</li><li class='list-group-item group-item'>cDeepPurple300</li><li class='list-group-item group-item'>bcDeepPurple300</li><li class='list-group-item group-item'>cDeepPurple400</li><li class='list-group-item group-item'>bcDeepPurple400</li><li class='list-group-item group-item'>cDeepPurple500</li><li class='list-group-item group-item'>bcDeepPurple500</li><li class='list-group-item group-item'>cDeepPurple600</li><li class='list-group-item group-item'>bcDeepPurple600</li><li class='list-group-item group-item'>cDeepPurple700</li><li class='list-group-item group-item'>bcDeepPurple700</li><li class='list-group-item group-item'>cDeepPurple800</li><li class='list-group-item group-item'>bcDeepPurple800</li><li class='list-group-item group-item'>cDeepPurple900</li><li class='list-group-item group-item'>bcDeepPurple900</li><li class='list-group-item group-item'>cBlueGrey</li><li class='list-group-item group-item'>bcBlueGrey</li><li class='list-group-item group-item'>cBlueGrey50</li><li class='list-group-item group-item'>bcBlueGrey50</li><li class='list-group-item group-item'>cBlueGrey100</li><li class='list-group-item group-item'>bcBlueGrey100</li><li class='list-group-item group-item'>cBlueGrey200</li><li class='list-group-item group-item'>bcBlueGrey200</li><li class='list-group-item group-item'>cBlueGrey300</li><li class='list-group-item group-item'>bcBlueGrey300</li><li class='list-group-item group-item'>cBlueGrey400</li><li class='list-group-item group-item'>bcBlueGrey400</li><li class='list-group-item group-item'>cBlueGrey500</li><li class='list-group-item group-item'>bcBlueGrey500</li><li class='list-group-item group-item'>cBlueGrey600</li><li class='list-group-item group-item'>bcBlueGrey600</li><li class='list-group-item group-item'>cBlueGrey700</li><li class='list-group-item group-item'>bcBlueGrey700</li><li class='list-group-item group-item'>cBlueGrey800</li><li class='list-group-item group-item'>bcBlueGrey800</li><li class='list-group-item group-item'>cBlueGrey900</li><li class='list-group-item group-item'>bcBlueGrey900</li><li class='list-group-item group-item'>cBrown</li><li class='list-group-item group-item'>bcBrown</li><li class='list-group-item group-item'>cBrown50</li><li class='list-group-item group-item'>bcBrown50</li><li class='list-group-item group-item'>cBrown100</li><li class='list-group-item group-item'>bcBrown100</li><li class='list-group-item group-item'>cBrown200</li><li class='list-group-item group-item'>bcBrown200</li><li class='list-group-item group-item'>cBrown300</li><li class='list-group-item group-item'>bcBrown300</li><li class='list-group-item group-item'>cBrown400</li><li class='list-group-item group-item'>bcBrown400</li><li class='list-group-item group-item'>cBrown500</li><li class='list-group-item group-item'>bcBrown500</li><li class='list-group-item group-item'>cBrown600</li><li class='list-group-item group-item'>bcBrown600</li><li class='list-group-item group-item'>cBrown700</li><li class='list-group-item group-item'>bcBrown700</li><li class='list-group-item group-item'>cBrown800</li><li class='list-group-item group-item'>bcBrown800</li><li class='list-group-item group-item'>cBrown900</li><li class='list-group-item group-item'>bcBrown900</li><li class='list-group-item group-item'>cGrey</li><li class='list-group-item group-item'>bcGrey</li><li class='list-group-item group-item'>cGrey50</li><li class='list-group-item group-item'>bcGrey50</li><li class='list-group-item group-item'>cGrey100</li><li class='list-group-item group-item'>bcGrey100</li><li class='list-group-item group-item'>cGrey200</li><li class='list-group-item group-item'>bcGrey200</li><li class='list-group-item group-item'>cGrey300</li><li class='list-group-item group-item'>bcGrey300</li><li class='list-group-item group-item'>cGrey400</li><li class='list-group-item group-item'>bcGrey400</li><li class='list-group-item group-item'>cGrey500</li><li class='list-group-item group-item'>bcGrey500</li><li class='list-group-item group-item'>cGrey600</li><li class='list-group-item group-item'>bcGrey600</li><li class='list-group-item group-item'>cGrey700</li><li class='list-group-item group-item'>bcGrey700</li><li class='list-group-item group-item'>cGrey800</li><li class='list-group-item group-item'>bcGrey800</li><li class='list-group-item group-item'>cGrey900</li><li class='list-group-item group-item'>bcGrey900</li><li class='list-group-item group-item'>cPinkAccent</li><li class='list-group-item group-item'>bcPinkAccent</li><li class='list-group-item group-item'>cPinkAccent100</li><li class='list-group-item group-item'>bcPinkAccent100</li><li class='list-group-item group-item'>cPinkAccent400</li><li class='list-group-item group-item'>bcPinkAccent400</li><li class='list-group-item group-item'>cPinkAccent700</li><li class='list-group-item group-item'>bcPinkAccent700</li><li class='list-group-item group-item'>cRedAccent</li><li class='list-group-item group-item'>bcRedAccent</li><li class='list-group-item group-item'>cRedAccent100</li><li class='list-group-item group-item'>bcRedAccent100</li><li class='list-group-item group-item'>cRedAccent400</li><li class='list-group-item group-item'>bcRedAccent400</li><li class='list-group-item group-item'>cRedAccent700</li><li class='list-group-item group-item'>bcRedAccent700</li><li class='list-group-item group-item'>cDeepOrangeAccent</li><li class='list-group-item group-item'>bcDeepOrangeAccent</li><li class='list-group-item group-item'>cDeepOrangeAccent100</li><li class='list-group-item group-item'>bcDeepOrangeAccent100</li><li class='list-group-item group-item'>cDeepOrangeAccent400</li><li class='list-group-item group-item'>bcDeepOrangeAccent400</li><li class='list-group-item group-item'>cDeepOrangeAccent700</li><li class='list-group-item group-item'>bcDeepOrangeAccent700</li><li class='list-group-item group-item'>cOrangeAccent</li><li class='list-group-item group-item'>bcOrangeAccent</li><li class='list-group-item group-item'>cOrangeAccent100</li><li class='list-group-item group-item'>bcOrangeAccent100</li><li class='list-group-item group-item'>cOrangeAccent400</li><li class='list-group-item group-item'>bcOrangeAccent400</li><li class='list-group-item group-item'>cOrangeAccent700</li><li class='list-group-item group-item'>bcOrangeAccent700</li><li class='list-group-item group-item'>cAmberAccent</li><li class='list-group-item group-item'>bcAmberAccent</li><li class='list-group-item group-item'>cAmberAccent100</li><li class='list-group-item group-item'>bcAmberAccent100</li><li class='list-group-item group-item'>cAmberAccent400</li><li class='list-group-item group-item'>bcAmberAccent400</li><li class='list-group-item group-item'>cAmberAccent700</li><li class='list-group-item group-item'>bcAmberAccent700</li><li class='list-group-item group-item'>cYellowAccent</li><li class='list-group-item group-item'>bcYellowAccent</li><li class='list-group-item group-item'>cYellowAccent100</li><li class='list-group-item group-item'>bcYellowAccent100</li><li class='list-group-item group-item'>cYellowAccent400</li><li class='list-group-item group-item'>bcYellowAccent400</li><li class='list-group-item group-item'>cYellowAccent700</li><li class='list-group-item group-item'>bcYellowAccent700</li><li class='list-group-item group-item'>cLimeAccent</li><li class='list-group-item group-item'>bcLimeAccent</li><li class='list-group-item group-item'>cLimeAccent100</li><li class='list-group-item group-item'>bcLimeAccent100</li><li class='list-group-item group-item'>cLimeAccent400</li><li class='list-group-item group-item'>bcLimeAccent400</li><li class='list-group-item group-item'>cLimeAccent700</li><li class='list-group-item group-item'>bcLimeAccent700</li><li class='list-group-item group-item'>cLightGreenAccent</li><li class='list-group-item group-item'>bcLightGreenAccent</li><li class='list-group-item group-item'>cLightGreenAccent100</li><li class='list-group-item group-item'>bcLightGreenAccent100</li><li class='list-group-item group-item'>cLightGreenAccent400</li><li class='list-group-item group-item'>bcLightGreenAccent400</li><li class='list-group-item group-item'>cLightGreenAccent700</li><li class='list-group-item group-item'>bcLightGreenAccent700</li><li class='list-group-item group-item'>cGreenAccent</li><li class='list-group-item group-item'>bcGreenAccent</li><li class='list-group-item group-item'>cGreenAccent100</li><li class='list-group-item group-item'>bcGreenAccent100</li><li class='list-group-item group-item'>cGreenAccent400</li><li class='list-group-item group-item'>bcGreenAccent400</li><li class='list-group-item group-item'>cGreenAccent700</li><li class='list-group-item group-item'>bcGreenAccent700</li><li class='list-group-item group-item'>cTealAccent</li><li class='list-group-item group-item'>bcTealAccent</li><li class='list-group-item group-item'>cTealAccent100</li><li class='list-group-item group-item'>bcTealAccent100</li><li class='list-group-item group-item'>cTealAccent400</li><li class='list-group-item group-item'>bcTealAccent400</li><li class='list-group-item group-item'>cTealAccent700</li><li class='list-group-item group-item'>bcTealAccent700</li><li class='list-group-item group-item'>cCyanAccent</li><li class='list-group-item group-item'>bcCyanAccent</li><li class='list-group-item group-item'>cCyanAccent100</li><li class='list-group-item group-item'>bcCyanAccent100</li><li class='list-group-item group-item'>cCyanAccent400</li><li class='list-group-item group-item'>bcCyanAccent400</li><li class='list-group-item group-item'>cCyanAccent700</li><li class='list-group-item group-item'>bcCyanAccent700</li><li class='list-group-item group-item'>cLightBlueAccent</li><li class='list-group-item group-item'>bcLightBlueAccent</li><li class='list-group-item group-item'>cLightBlueAccent100</li><li class='list-group-item group-item'>bcLightBlueAccent100</li><li class='list-group-item group-item'>cLightBlueAccent400</li><li class='list-group-item group-item'>bcLightBlueAccent400</li><li class='list-group-item group-item'>cLightBlueAccent700</li><li class='list-group-item group-item'>bcLightBlueAccent700</li><li class='list-group-item group-item'>cBlueAccent</li><li class='list-group-item group-item'>bcBlueAccent</li><li class='list-group-item group-item'>cBlueAccent100</li><li class='list-group-item group-item'>bcBlueAccent100</li><li class='list-group-item group-item'>cBlueAccent400</li><li class='list-group-item group-item'>bcBlueAccent400</li><li class='list-group-item group-item'>cBlueAccent700</li><li class='list-group-item group-item'>bcBlueAccent700</li><li class='list-group-item group-item'>cIndigoAccent</li><li class='list-group-item group-item'>bcIndigoAccent</li><li class='list-group-item group-item'>cIndigoAccent100</li><li class='list-group-item group-item'>bcIndigoAccent100</li><li class='list-group-item group-item'>cIndigoAccent400</li><li class='list-group-item group-item'>bcIndigoAccent400</li><li class='list-group-item group-item'>cIndigoAccent700</li><li class='list-group-item group-item'>bcIndigoAccent700</li><li class='list-group-item group-item'>cPurpleAccent</li><li class='list-group-item group-item'>bcPurpleAccent</li><li class='list-group-item group-item'>cPurpleAccent100</li><li class='list-group-item group-item'>bcPurpleAccent100</li><li class='list-group-item group-item'>cPurpleAccent400</li><li class='list-group-item group-item'>bcPurpleAccent400</li><li class='list-group-item group-item'>cPurpleAccent700</li><li class='list-group-item group-item'>bcPurpleAccent700</li><li class='list-group-item group-item'>cDeepPurpleAccent</li><li class='list-group-item group-item'>bcDeepPurpleAccent</li><li class='list-group-item group-item'>cDeepPurpleAccent100</li><li class='list-group-item group-item'>bcDeepPurpleAccent100</li><li class='list-group-item group-item'>cDeepPurpleAccent400</li><li class='list-group-item group-item'>bcDeepPurpleAccent400</li><li class='list-group-item group-item'>cDeepPurpleAccent700</li><li class='list-group-item group-item'>bcDeepPurpleAccent700</li>
+    </ul>
+<br/>    <ul class="list-group">
+      <li class="list-group-item active group-name dialog" hide-item="true">dialog</li>
+       <li class='list-group-item group-item'>dialog_confirm</li><li class='list-group-item group-item'>dialog_info</li><li class='list-group-item group-item'>dialog_datepicker</li><li class='list-group-item group-item'>dialog_timepicker_24h_format</li><li class='list-group-item group-item'>dialog_timepicker_12h_format</li><li class='list-group-item group-item'>dialog_bottomsheet</li><li class='list-group-item group-item'>dialog_bottomsheet_confirmation</li>
+    </ul>
+<br/>    <ul class="list-group">
+      <li class="list-group-item active group-name fire_base" hide-item="true">fire_base</li>
+       <li class='list-group-item group-item'>fire_user</li><li class='list-group-item group-item'>fire_login</li><li class='list-group-item group-item'>fire_login_anonymously</li><li class='list-group-item group-item'>fire_login_google</li><li class='list-group-item group-item'>fire_signup</li><li class='list-group-item group-item'>fire_register</li><li class='list-group-item group-item'>fire_create</li><li class='list-group-item group-item'>fire_logout</li><li class='list-group-item group-item'>fire_add</li><li class='list-group-item group-item'>fire_update</li><li class='list-group-item group-item'>fire_delete</li><li class='list-group-item group-item'>fire_get</li><li class='list-group-item group-item'>fire_snapshot</li><li class='list-group-item group-item'>fire_delete_all</li><li class='list-group-item group-item'>body_simple</li>
+    </ul>
+<br/>    <ul class="list-group">
+      <li class="list-group-item active group-name form_" hide-item="true">form_</li>
+       <li class='list-group-item group-item'>form_rounded_textfield</li><li class='list-group-item group-item'>form_textfield</li><li class='list-group-item group-item'>form_textfield_email</li><li class='list-group-item group-item'>form_textfield_password</li><li class='list-group-item group-item'>form_numberfield</li><li class='list-group-item group-item'>form_datefield</li><li class='list-group-item group-item'>form_timefield</li><li class='list-group-item group-item'>form_memofield</li><li class='list-group-item group-item'>form_radiofield</li><li class='list-group-item group-item'>form_check</li><li class='list-group-item group-item'>form_dropdown</li><li class='list-group-item group-item'>form_rating</li><li class='list-group-item group-item'>form_rating_sm</li><li class='list-group-item group-item'>form_rating_lg</li><li class='list-group-item group-item'>form_row_ratingbar_sm</li><li class='list-group-item group-item'>form_row_ratingbar</li><li class='list-group-item group-item'>form_row_ratingbar_md</li><li class='list-group-item group-item'>form_row_ratingbar_lg</li><li class='list-group-item group-item'>form_rating_reviews</li><li class='list-group-item group-item'>get_location</li><li class='list-group-item group-item'>get_image_with_file_picker</li><li class='list-group-item group-item'>get_image_gallery</li><li class='list-group-item group-item'>get_image_camera</li><li class='list-group-item group-item'>get_video_gallery</li><li class='list-group-item group-item'>get_video_camera</li><li class='list-group-item group-item'>get_permission</li><li class='list-group-item group-item'>get_permission_and_open_app_settings_if_denied</li><li class='list-group-item group-item'>get_scroll_listener</li><li class='list-group-item group-item'>hive_init</li><li class='list-group-item group-item'>hive_write</li><li class='list-group-item group-item'>hive_get</li><li class='list-group-item group-item'>get_temporary_dir</li><li class='list-group-item group-item'>grid</li><li class='list-group-item group-item'>grid2</li><li class='list-group-item group-item'>grid3</li><li class='list-group-item group-item'>grid4</li><li class='list-group-item group-item'>grid5</li><li class='list-group-item group-item'>grid_count</li><li class='list-group-item group-item'>grid_extent</li><li class='list-group-item group-item'>dio_import</li><li class='list-group-item group-item'>dio_get</li><li class='list-group-item group-item'>dio_get_single</li><li class='list-group-item group-item'>dio_post</li><li class='list-group-item group-item'>dio_put</li><li class='list-group-item group-item'>dio_delete</li><li class='list-group-item group-item'>dio_upload</li><li class='list-group-item group-item'>dio_post_login</li>
+    </ul>
+<br/>    <ul class="list-group">
+      <li class="list-group-item active group-name form_ui" hide-item="true">form_ui</li>
+       <li class='list-group-item group-item'>combo</li>
+    </ul>
+<br/>    <ul class="list-group">
+      <li class="list-group-item active group-name http" hide-item="true">http</li>
+       <li class='list-group-item group-item'>http_import</li><li class='list-group-item group-item'>http_get</li><li class='list-group-item group-item'>http_get_single</li><li class='list-group-item group-item'>http_post</li><li class='list-group-item group-item'>http_put</li><li class='list-group-item group-item'>http_delete</li><li class='list-group-item group-item'>http_upload</li><li class='list-group-item group-item'>http_post_login</li>
+    </ul>
+<br/>    <ul class="list-group">
+      <li class="list-group-item active group-name http_ui" hide-item="true">http_ui</li>
+       <li class='list-group-item group-item'>f_list_view</li><li class='list-group-item group-item'>transformMatrix4</li>
+    </ul>
+<br/>    <ul class="list-group">
+      <li class="list-group-item active group-name hyperui_form" hide-item="true">hyperui_form</li>
+       <li class='list-group-item group-item'>q_textfield</li><li class='list-group-item group-item'>q_email</li><li class='list-group-item group-item'>q_password</li><li class='list-group-item group-item'>q_numberfield</li><li class='list-group-item group-item'>q_moneyfield</li><li class='list-group-item group-item'>q_moneyfield_decimal</li><li class='list-group-item group-item'>q_moneyfield_decimal_with_currency</li><li class='list-group-item group-item'>q_autocomplete</li><li class='list-group-item group-item'>q_autocomplete_with_photo</li><li class='list-group-item group-item'>q_datefield</li><li class='list-group-item group-item'>q_timefield</li><li class='list-group-item group-item'>q_memofield</li><li class='list-group-item group-item'>q_dropdown</li><li class='list-group-item group-item'>q_check</li><li class='list-group-item group-item'>q_switch</li><li class='list-group-item group-item'>q_radio</li><li class='list-group-item group-item'>q_image_picker</li><li class='list-group-item group-item'>q_location_picker</li><li class='list-group-item group-item'>q_list_view</li><li class='list-group-item group-item'>icon</li><li class='list-group-item group-item'>icon_badge</li><li class='list-group-item group-item'>icon_image</li><li class='list-group-item group-item'>icon_image_asset</li><li class='list-group-item group-item'>icon_button</li><li class='list-group-item group-item'>icon_image_button</li><li class='list-group-item group-item'>icon_image_asset_button</li><li class='list-group-item group-item'>mdi</li><li class='list-group-item group-item'>icons</li><li class='list-group-item group-item'>faw</li><li class='list-group-item group-item'>image</li><li class='list-group-item group-item'>image_network</li><li class='list-group-item group-item'>image_asset</li><li class='list-group-item group-item'>image_galleries</li><li class='list-group-item group-item'>list_builder</li><li class='list-group-item group-item'>list_separated</li><li class='list-group-item group-item'>list_horizontal</li><li class='list-group-item group-item'>list_horizontal_with_listview</li>
+    </ul>
+<br/>    <ul class="list-group">
+      <li class="list-group-item active group-name lifecycle" hide-item="true">lifecycle</li>
+       <li class='list-group-item group-item'>lifecycle</li>
+    </ul>
+<br/>    <ul class="list-group">
+      <li class="list-group-item active group-name magic_snippet" hide-item="true">magic_snippet</li>
+       <li class='list-group-item group-item'>dummy_product_list</li><li class='list-group-item group-item'>dummy_furniture_list</li><li class='list-group-item group-item'>dur100</li><li class='list-group-item group-item'>dur200</li><li class='list-group-item group-item'>dur300</li><li class='list-group-item group-item'>dur400</li><li class='list-group-item group-item'>dur500</li><li class='list-group-item group-item'>dur600</li><li class='list-group-item group-item'>dur700</li><li class='list-group-item group-item'>dur800</li><li class='list-group-item group-item'>dur900</li><li class='list-group-item group-item'>dur1000</li><li class='list-group-item group-item'>dur1100</li><li class='list-group-item group-item'>dur1200</li><li class='list-group-item group-item'>dur1300</li><li class='list-group-item group-item'>dur1400</li><li class='list-group-item group-item'>dur1500</li><li class='list-group-item group-item'>dur1600</li><li class='list-group-item group-item'>dur1700</li><li class='list-group-item group-item'>dur1800</li><li class='list-group-item group-item'>dur1900</li><li class='list-group-item group-item'>dur2000</li><li class='list-group-item group-item'>msd</li><li class='list-group-item group-item'>lmsd</li><li class='list-group-item group-item'>rq</li><li class='list-group-item group-item'>func</li><li class='list-group-item group-item'>cop</li><li class='list-group-item group-item'>cos</li><li class='list-group-item group-item'>sst</li><li class='list-group-item group-item'>afunc</li><li class='list-group-item group-item'>for</li><li class='list-group-item group-item'>ctt</li><li class='list-group-item group-item'>rtt</li><li class='list-group-item group-item'>capc</li><li class='list-group-item group-item'>capr</li><li class='list-group-item group-item'>caprtt</li>
+    </ul>
+
+  </div>
+</div>
+
+</div>
+
+<div style="height: 140px;"></div>
+    <script src="${jqueryUri}"></script>
+    <script type="module" src="${toolkitUri}"></script>
+    <script type="module" src="${bootstrapJs}"></script>
+    <script type="module" src="${mainUri}"></script>
+
+    <script>
+    $(function(){
+
+      $(".group-name").each(function(){
+        $(this).click(function(){
+          if($(this).attr("hide-item")!="true"){
+            $(this).parent().find(".group-item").hide(); 
+            $(this).attr("hide-item","true");
+            $(this).css("background-color","grey !important");
+          }
+          else {
+            $(this).parent().find(".group-item").show();
+            $(this).attr("hide-item","false");
+            $(this).css("background-color","blue !important");
+          }
+            
+        });
+      });
+
+      $(".group-item").hide();
+      
+    });
+    </script>
+
+    <style>
+    body {
+      background: #252526;
+      color: #FFF;
+    }
+    a {
+      color: #dcdc8b;
+    }
+    .list-group-item {
+      background-color: #3c3c3c !important;
+      color: #FFF !important;
+      border-radius: 0px solid transparent !important;
+      border: 0px solid transparent !important;
+    }
+    .list-group-item.active {
+      background-color: #0e639c !important;
+    }
+    .list-group-item.project_template {
+      background-color: #EA820C !important;
+    }
+     .list-group-item.utility {
+      background-color: #009B77 !important;
+    }
+    .getx {
+      background-color: #BDC3C7 !important;
+      float: left;
+      width: 46%;
+      font-size: 10px !important;
+      color: #000;
+    }
+
+    .riverpod {
+      background-color: #BDC3C7 !important;
+      float: right;
+      width: 46%;
+      font-size: 10px !important;
+      color: #000;
+    }
+
+    .title {
+      background-color: #2B3E51 !important;
+      float: left;
+      width: 100%;
+      font-size: 10px !important;
+      color: #000;
+    }
+
+    .item {
+      background-color: #BDC3C7 !important;
+      float: left;
+      width: 100%;
+      font-size: 10px !important;
+      color: #000;
+    }
+
+    .float-left {
+      float: left;
+    }
+     .float-right {
+      float: right;
+    }
+
+    vscode-button {
+      width: 100%;
+      margin-bottom: 6px;
+    }
+    </style>
+    
+</body>
+
+</html>
+
+`;
+
+    }
+}
