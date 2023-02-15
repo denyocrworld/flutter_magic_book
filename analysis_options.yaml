@@ -1,0 +1,16 @@
+include: package:flutter_lints/flutter.yaml
+
+linter:
+  rules:
+    non_constant_identifier_names: false
+    library_private_types_in_public_api: false
+    use_build_context_synchronously: false
+    depend_on_referenced_packages: false
+
+analyzer:
+  errors:
+    invalid_annotation_target: ignore
+    invalid_use_of_protected_member: ignore
+    unused_local_variable: ignore
+    avoid_print: ignore
+    unnecessary_type_check: ignore
