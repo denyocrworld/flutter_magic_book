@@ -382,6 +382,16 @@ export 'package:hyper_ui/module/online_class/flutter_book/fbk_main_navigation/wi
 export 'package:hyper_ui/module/online_class/flutter_book/fbk_wpm/controller/fbk_wpm_controller.dart';
 export 'package:hyper_ui/module/online_class/flutter_book/fbk_wpm/service/fbk_wpm_service.dart';
 export 'package:hyper_ui/module/online_class/flutter_book/fbk_wpm/view/fbk_wpm_view.dart';
+export 'package:hyper_ui/module/online_class/flutter_book/ovh/ovh1/controller/ovh1_controller.dart';
+export 'package:hyper_ui/module/online_class/flutter_book/ovh/ovh1/view/ovh1_view.dart';
+export 'package:hyper_ui/module/online_class/flutter_book/ovh/ovh2/controller/ovh2_controller.dart';
+export 'package:hyper_ui/module/online_class/flutter_book/ovh/ovh2/view/ovh2_view.dart';
+export 'package:hyper_ui/module/online_class/flutter_book/ovh/ovh3/controller/ovh3_controller.dart';
+export 'package:hyper_ui/module/online_class/flutter_book/ovh/ovh3/view/ovh3_view.dart';
+export 'package:hyper_ui/module/online_class/flutter_book/ovh/ovh4/controller/ovh4_controller.dart';
+export 'package:hyper_ui/module/online_class/flutter_book/ovh/ovh4/view/ovh4_view.dart';
+export 'package:hyper_ui/module/online_class/flutter_book/ovh/ovh5/controller/ovh5_controller.dart';
+export 'package:hyper_ui/module/online_class/flutter_book/ovh/ovh5/view/ovh5_view.dart';
 export 'package:hyper_ui/module/online_class/flutter_book/shared/widget/row_label/row_label.dart';
 export 'package:hyper_ui/module/online_class/http_request/hr_chart/controller/hr_chart_controller.dart';
 export 'package:hyper_ui/module/online_class/http_request/hr_chart/view/hr_chart_view.dart';
