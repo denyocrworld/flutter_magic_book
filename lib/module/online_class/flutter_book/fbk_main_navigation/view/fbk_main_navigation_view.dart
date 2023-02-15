@@ -40,15 +40,12 @@ class FbkMainNavigationView extends StatefulWidget {
           ),
           title: const Text('Flutter Magic Book'),
         ),
-        body: TabBarView(
+        body: const TabBarView(
           children: [
-            const FbkDartExerciseView(),
-            const FbkFlutterExerciseView(),
-            const FbkUIBasicExerciseView(),
-            const FbkUIProExerciseView(),
-            Container(
-              color: Colors.blue[100],
-            ),
+            FbkDartExerciseView(),
+            FbkFlutterExerciseView(),
+            FbkUIBasicExerciseView(),
+            FbkUIProExerciseView(),
           ],
         ),
       ),
