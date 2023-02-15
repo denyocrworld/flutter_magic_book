@@ -57,6 +57,8 @@ class FbkWpmController extends State<FbkWpmView> implements MvcController {
   restart() {
     seconds = 0;
     word = 0;
+    currentIndex = 0;
+    FbkWpmService.words.shuffle();
     setState(() {});
     Input.focus("input");
   }

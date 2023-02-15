@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hyper_ui/state_util.dart';
-import '../view/ESignup5_view.dart';
+import '../view/esignup5_view.dart';
 
 class ESignup5Controller extends State<ESignup5View> implements MvcController {
   static late ESignup5Controller instance;

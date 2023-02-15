@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hyper_ui/state_util.dart';
-import '../view/EEditProfile7_view.dart';
+import '../view/eeditprofile7_view.dart';
 
 class EEditProfile7Controller extends State<EEditProfile7View>
     implements MvcController {

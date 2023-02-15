@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hyper_ui/core.dart';
-import '../controller/EList8_controller.dart';
+import '../controller/elist8_controller.dart';
 
 class EList8View extends StatefulWidget {
   const EList8View({Key? key}) : super(key: key);

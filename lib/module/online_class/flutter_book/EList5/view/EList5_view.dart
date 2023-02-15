@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hyper_ui/core.dart';
-import '../controller/EList5_controller.dart';
+import '../controller/elist5_controller.dart';
 
 class EList5View extends StatefulWidget {
   const EList5View({Key? key}) : super(key: key);

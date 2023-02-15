@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hyper_ui/state_util.dart';
-import '../view/EOrderDetail3_view.dart';
+import '../view/eorderdetail3_view.dart';
 
 class EOrderDetail3Controller extends State<EOrderDetail3View>
     implements MvcController {

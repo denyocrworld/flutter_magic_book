@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hyper_ui/state_util.dart';
-import '../view/ENotification10_view.dart';
+import '../view/enotification10_view.dart';
 
 class ENotification10Controller extends State<ENotification10View>
     implements MvcController {

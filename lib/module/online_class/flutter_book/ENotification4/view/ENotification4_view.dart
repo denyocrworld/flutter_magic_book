@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hyper_ui/core.dart';
-import '../controller/ENotification4_controller.dart';
+import '../controller/enotification4_controller.dart';
 
 class ENotification4View extends StatefulWidget {
   const ENotification4View({Key? key}) : super(key: key);

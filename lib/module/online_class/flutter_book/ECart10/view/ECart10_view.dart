@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hyper_ui/core.dart';
-import '../controller/ECart10_controller.dart';
+import '../controller/ecart10_controller.dart';
 
 class ECart10View extends StatefulWidget {
   const ECart10View({Key? key}) : super(key: key);

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hyper_ui/state_util.dart';
-import '../view/EDetail2_view.dart';
+import '../view/edetail2_view.dart';
 
 class EDetail2Controller extends State<EDetail2View> implements MvcController {
   static late EDetail2Controller instance;

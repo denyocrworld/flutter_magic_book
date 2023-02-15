@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hyper_ui/core.dart';
-import '../controller/EDetail1_controller.dart';
+import '../controller/edetail1_controller.dart';
 
 class EDetail1View extends StatefulWidget {
   const EDetail1View({Key? key}) : super(key: key);

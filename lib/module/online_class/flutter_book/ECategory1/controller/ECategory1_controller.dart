@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hyper_ui/state_util.dart';
-import '../view/ECategory1_view.dart';
+import '../view/ecategory1_view.dart';
 
 class ECategory1Controller extends State<ECategory1View>
     implements MvcController {

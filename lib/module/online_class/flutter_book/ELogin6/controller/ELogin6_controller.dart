@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hyper_ui/state_util.dart';
-import '../view/ELogin6_view.dart';
+import '../view/elogin6_view.dart';
 
 class ELogin6Controller extends State<ELogin6View> implements MvcController {
   static late ELogin6Controller instance;

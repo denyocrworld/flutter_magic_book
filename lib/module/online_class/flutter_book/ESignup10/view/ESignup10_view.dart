@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hyper_ui/core.dart';
-import '../controller/ESignup10_controller.dart';
+import '../controller/esignup10_controller.dart';
 
 class ESignup10View extends StatefulWidget {
   const ESignup10View({Key? key}) : super(key: key);

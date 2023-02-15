@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hyper_ui/core.dart';
-import '../controller/EEditProfile3_controller.dart';
+import '../controller/eeditprofile3_controller.dart';
 
 class EEditProfile3View extends StatefulWidget {
   const EEditProfile3View({Key? key}) : super(key: key);

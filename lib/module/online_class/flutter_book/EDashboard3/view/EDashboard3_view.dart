@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hyper_ui/core.dart';
-import '../controller/EDashboard3_controller.dart';
+import '../controller/edashboard3_controller.dart';
 
 class EDashboard3View extends StatefulWidget {
   const EDashboard3View({Key? key}) : super(key: key);

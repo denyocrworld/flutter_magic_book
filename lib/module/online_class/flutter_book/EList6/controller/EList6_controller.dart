@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hyper_ui/state_util.dart';
-import '../view/EList6_view.dart';
+import '../view/elist6_view.dart';
 
 class EList6Controller extends State<EList6View> implements MvcController {
   static late EList6Controller instance;

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hyper_ui/state_util.dart';
-import '../view/EDashboard6_view.dart';
+import '../view/edashboard6_view.dart';
 
 class EDashboard6Controller extends State<EDashboard6View>
     implements MvcController {

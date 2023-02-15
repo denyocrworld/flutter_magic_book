@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hyper_ui/core.dart';
-import '../controller/EChat8_controller.dart';
+import '../controller/echat8_controller.dart';
 
 class EChat8View extends StatefulWidget {
   const EChat8View({Key? key}) : super(key: key);

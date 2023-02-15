@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hyper_ui/core.dart';
-import '../controller/EChat1_controller.dart';
+import '../controller/echat1_controller.dart';
 
 class EChat1View extends StatefulWidget {
   const EChat1View({Key? key}) : super(key: key);

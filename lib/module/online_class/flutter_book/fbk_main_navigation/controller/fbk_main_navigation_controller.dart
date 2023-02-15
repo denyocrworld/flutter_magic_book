@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hyper_ui/state_util.dart';
-import '../view/fbk_main_navigation_view.dart';
+import 'package:hyper_ui/core.dart';
 
 class FbkMainNavigationController extends State<FbkMainNavigationView>
     implements MvcController {
@@ -18,4 +17,20 @@ class FbkMainNavigationController extends State<FbkMainNavigationView>
 
   @override
   Widget build(BuildContext context) => widget.build(context, this);
+
+  String fullName = "";
+  String email = "";
+  String whatsappNumber = "";
+
+  submitForm() async {
+    if (fullName.isEmpty || email.isEmpty || whatsappNumber.isEmpty) {
+      showInfoDialog("Data tidak lengkap!");
+      return;
+    }
+
+    mainStorage.put("eprofile_name", fullName);
+    mainStorage.put("eprofile_email", email);
+    mainStorage.put("eprofile_whatsapp", whatsappNumber);
+    setState(() {});
+  }
 }

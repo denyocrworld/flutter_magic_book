@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hyper_ui/core.dart';
-import '../controller/EProfile4_controller.dart';
+import '../controller/eprofile4_controller.dart';
 
 class EProfile4View extends StatefulWidget {
   const EProfile4View({Key? key}) : super(key: key);

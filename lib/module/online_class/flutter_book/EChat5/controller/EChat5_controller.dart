@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hyper_ui/state_util.dart';
-import '../view/EChat5_view.dart';
+import '../view/echat5_view.dart';
 
 class EChat5Controller extends State<EChat5View> implements MvcController {
   static late EChat5Controller instance;

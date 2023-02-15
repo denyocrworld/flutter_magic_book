@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hyper_ui/core.dart';
-import '../controller/ELogin10_controller.dart';
+import '../controller/elogin10_controller.dart';
 
 class ELogin10View extends StatefulWidget {
   const ELogin10View({Key? key}) : super(key: key);

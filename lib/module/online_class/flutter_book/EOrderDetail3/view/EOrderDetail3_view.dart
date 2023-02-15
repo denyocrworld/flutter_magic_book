@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hyper_ui/core.dart';
-import '../controller/EOrderDetail3_controller.dart';
+import '../controller/eorderdetail3_controller.dart';
 
 class EOrderDetail3View extends StatefulWidget {
   const EOrderDetail3View({Key? key}) : super(key: key);

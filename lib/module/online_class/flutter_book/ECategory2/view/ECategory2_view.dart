@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hyper_ui/core.dart';
-import '../controller/ECategory2_controller.dart';
+import '../controller/ecategory2_controller.dart';
 
 class ECategory2View extends StatefulWidget {
   const ECategory2View({Key? key}) : super(key: key);

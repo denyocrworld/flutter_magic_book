@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hyper_ui/state_util.dart';
-import '../view/ECart5_view.dart';
+import '../view/ecart5_view.dart';
 
 class ECart5Controller extends State<ECart5View> implements MvcController {
   static late ECart5Controller instance;

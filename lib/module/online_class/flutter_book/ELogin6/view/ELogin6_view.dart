@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hyper_ui/core.dart';
-import '../controller/ELogin6_controller.dart';
+import '../controller/elogin6_controller.dart';
 
 class ELogin6View extends StatefulWidget {
   const ELogin6View({Key? key}) : super(key: key);
