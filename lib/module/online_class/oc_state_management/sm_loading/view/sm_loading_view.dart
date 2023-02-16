@@ -38,6 +38,7 @@ class SmLoadingView extends StatefulWidget {
                     ),
                     onPressed: () => controller.updateLoadingState(),
                   ),
+                  //---
                   const SizedBox(
                     height: 20.0,
                   ),
@@ -72,6 +73,23 @@ class SmLoadingView extends StatefulWidget {
               ),
             ),
           ),
+          // if (controller.loading)
+          //   Container(
+          //     color: Colors.black26,
+          //     child: Center(
+          //       child: Card(
+          //         child: InkWell(
+          //           onTap: () {
+          //             Get.back();
+          //           },
+          //           child: const Padding(
+          //             padding: EdgeInsets.all(8.0),
+          //             child: Text("Loading..."),
+          //           ),
+          //         ),
+          //       ),
+          //     ),
+          //   ),
         ],
       ),
     );

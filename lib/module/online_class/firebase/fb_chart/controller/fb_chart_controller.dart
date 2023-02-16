@@ -23,6 +23,7 @@ class FbChartController extends State<FbChartView> implements MvcController {
   Widget build(BuildContext context) => widget.build(context, this);
 
   doGenerate() async {
+    //firedeleteall
     var snapshot = await FirebaseFirestore.instance.collection("sales").get();
     for (var i = 0; i < snapshot.docs.length; i++) {
       await FirebaseFirestore.instance
@@ -30,7 +31,7 @@ class FbChartController extends State<FbChartView> implements MvcController {
           .doc(snapshot.docs[i].id)
           .delete();
     }
-
+    //fireadd
     for (var i = 0; i < 10; i++) {
       await FirebaseFirestore.instance.collection("sales").add({
         "created_at": Timestamp.now(),

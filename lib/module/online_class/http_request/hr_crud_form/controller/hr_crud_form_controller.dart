@@ -38,6 +38,8 @@ class HrCrudFormController extends State<HrCrudFormView>
 
   doSave() async {
     if (isEditMode) {
+      //update
+
       var id = widget.item!["id"];
       var response = await Dio().post(
         "${AppConfig.baseUrl}/deny/api/products/$id",
@@ -55,6 +57,8 @@ class HrCrudFormController extends State<HrCrudFormView>
       );
       Map obj = response.data;
     } else {
+      //create
+
       var response = await Dio().post(
         "${AppConfig.baseUrl}/deny/api/products",
         options: Options(

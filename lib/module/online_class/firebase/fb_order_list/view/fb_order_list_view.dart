@@ -28,6 +28,7 @@ class FbOrderListView extends StatefulWidget {
         padding: const EdgeInsets.all(10.0),
         child: Column(
           children: [
+            //Ctrl+Shift+ALT+W
             Expanded(
               child: StreamBuilder<QuerySnapshot>(
                 stream: FirebaseFirestore.instance

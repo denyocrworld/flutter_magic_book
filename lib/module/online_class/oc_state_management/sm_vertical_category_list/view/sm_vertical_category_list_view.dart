@@ -24,6 +24,7 @@ class SmVerticalCategoryListView extends StatefulWidget {
                 fontWeight: FontWeight.bold,
               ),
             ),
+            //ALT+SHIFT+H
             Expanded(
               child: ListView.builder(
                 itemCount: controller.categoryList.length,

@@ -8,6 +8,10 @@ class Ovh2View extends StatefulWidget {
   Widget build(context, Ovh2Controller controller) {
     controller.view = this;
 
+    /*
+    Perbaiki kode dibawah ini agar tidak overflow,
+    Gunakan Expanded! Bungkus pada Container yang berwarna ungu!
+    */
     return Scaffold(
       appBar: AppBar(
         title: const Text("Ovh2"),

@@ -37,6 +37,7 @@ class SmBasicAnimationView extends StatefulWidget {
                 height: 20.0,
               ),
               AnimatedContainer(
+                //dur900
                 duration: const Duration(milliseconds: 200),
                 width: controller.animated ? 300 : 200,
                 margin: EdgeInsets.only(

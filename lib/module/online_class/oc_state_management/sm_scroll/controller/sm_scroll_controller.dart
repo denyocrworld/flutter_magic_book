@@ -14,6 +14,7 @@ class SmScrollController extends State<SmScrollView> implements MvcController {
       var offset = scrollController.offset;
       var maxOffset = scrollController.position.maxScrollExtent;
       if (offset == maxOffset) {
+        //mentok ke bawah
         loadModeProducts();
       }
     });

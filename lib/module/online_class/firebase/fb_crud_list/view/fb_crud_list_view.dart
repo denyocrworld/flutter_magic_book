@@ -39,6 +39,7 @@ class FbCrudListView extends StatefulWidget {
                           (data.docs[index].data() as Map<String, dynamic>);
                       item["id"] = data.docs[index].id;
 
+//alt+shift+D
                       return Dismissible(
                         key: UniqueKey(),
                         onDismissed: (detail) {},

@@ -1,6 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:hyper_ui/core.dart';
 
+/*
+1. Constructor Class
+2. Context, diambil lewat Argument
+3. DI
+*/
+
 class OcHttpRequestView extends StatefulWidget {
   const OcHttpRequestView({Key? key}) : super(key: key);
 

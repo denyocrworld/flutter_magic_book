@@ -2,6 +2,15 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:hyper_ui/core.dart';
 
+/*
+Firebase Storage
+Hosting temen2
+Imgbb
+Cloudinary
+
+
+url
+*/
 class FbUploadImageView extends StatefulWidget {
   const FbUploadImageView({Key? key}) : super(key: key);
 

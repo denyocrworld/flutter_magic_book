@@ -55,7 +55,9 @@ class _QDropdownFieldState extends State<QDropdownField> {
   }
 
   setAllItemsToFalse() {
-    for (var item in items) {}
+    for (var item in items) {
+      // item["checked"] = false;
+    }
   }
 
   Map<String, dynamic>? get currentValue {

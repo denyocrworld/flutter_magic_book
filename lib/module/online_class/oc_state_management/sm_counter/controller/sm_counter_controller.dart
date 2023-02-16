@@ -34,3 +34,12 @@ class SmCounterController extends State<SmCounterView>
     setState(() {});
   }
 }
+
+/*
+State Management => Aplikasi Kecil atau Aplikasi Besar
+
+Architecture
+Scalable
+Mudah di maintain
+Mudah di test
+*/

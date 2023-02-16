@@ -35,6 +35,8 @@ class _QSwitchState extends State<QSwitch> {
   Widget build(BuildContext context) {
     return FormField(
       initialValue: false,
+      // validator: widget.validator,
+      // validator: (value) => validate(items),
       validator: (value) => widget.validator!(items),
       enabled: true,
       builder: (FormFieldState<bool> field) {

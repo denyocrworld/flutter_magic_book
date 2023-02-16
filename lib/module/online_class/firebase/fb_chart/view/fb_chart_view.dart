@@ -31,6 +31,7 @@ class FbChartView extends StatefulWidget {
           padding: const EdgeInsets.all(10.0),
           child: Column(
             children: [
+              //chart_
               StreamBuilder<QuerySnapshot>(
                 stream: FirebaseFirestore.instance
                     .collection("sales")
@@ -60,6 +61,7 @@ class FbChartView extends StatefulWidget {
                     padding: const EdgeInsets.all(12.0),
                     child: SfCartesianChart(
                       series: <ChartSeries>[
+                        // Renders line chart
                         LineSeries<Map, int>(
                           dataSource: items,
                           xValueMapper: (Map data, _) => data["year"],
@@ -70,6 +72,7 @@ class FbChartView extends StatefulWidget {
                   );
                 },
               ),
+
               Builder(
                 builder: (context) {
                   final List<Map> chartData = [
@@ -100,6 +103,7 @@ class FbChartView extends StatefulWidget {
                     padding: const EdgeInsets.all(12.0),
                     child: SfCartesianChart(
                       series: <ChartSeries>[
+                        // Renders line chart
                         LineSeries<Map, int>(
                           dataSource: chartData,
                           xValueMapper: (Map data, _) => data["year"],

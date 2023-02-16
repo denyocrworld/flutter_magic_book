@@ -28,7 +28,7 @@ class HrCrudListView extends StatefulWidget {
                 itemCount: controller.productList.length,
                 itemBuilder: (context, index) {
                   var item = controller.productList[index];
-
+                  //ALT+SHIFT+D
                   return Dismissible(
                     key: UniqueKey(),
                     onDismissed: (detail) {},

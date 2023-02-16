@@ -33,6 +33,11 @@ class HrMapView extends StatefulWidget {
           padding: const EdgeInsets.all(10.0),
           child: Column(
             children: [
+              //map_fluttermap
+              /*
+              TODO: import this lines
+              import 'package:latlong2/latlong.dart';
+              */
               if (controller.markers.isNotEmpty)
                 Builder(
                   builder: (context) {

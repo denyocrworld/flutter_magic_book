@@ -54,7 +54,12 @@ Future showInfoDialog(String message) async {
                 ],
               ),
             ),
-          ).animate().fade().shake(),
+          )
+              .animate(
+                  // delay: 200.ms,
+                  )
+              .fade()
+              .shake(),
         ),
       );
       return AlertDialog(

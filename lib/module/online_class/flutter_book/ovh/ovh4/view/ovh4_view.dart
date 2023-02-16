@@ -15,6 +15,10 @@ class Ovh4View extends StatefulWidget {
       ),
       body: Column(
         children: [
+          /*
+          Perbaiki kode dibawah ini agar tidak overflow,
+          Gunakan SingleChildScrollView dengan Axis Horizontal pada Row!
+          */
           Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -50,6 +54,10 @@ class Ovh4View extends StatefulWidget {
           ),
           const Divider(),
           const Divider(),
+          /*
+          Perbaiki kode dibawah ini agar tidak overflow,
+          Gunakan Expanded pada Container yang merah!
+          */
           Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -85,6 +93,11 @@ class Ovh4View extends StatefulWidget {
           ),
           const Divider(),
           const Divider(),
+          /*
+          Perbaiki kode dibawah ini agar tidak overflow,
+          Bungkus di dalam ListView dengan Axis.horizontal,
+          Lalu bungkus ListView dengan Container dengan tinggi 100
+          */
           Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [

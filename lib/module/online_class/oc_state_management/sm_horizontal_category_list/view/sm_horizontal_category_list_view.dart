@@ -25,6 +25,7 @@ class SmHorizontalCategoryListView extends StatefulWidget {
                   fontWeight: FontWeight.bold,
                 ),
               ),
+              //ALT+SHIFT+H
               SizedBox(
                 height: 50.0,
                 child: ListView.builder(

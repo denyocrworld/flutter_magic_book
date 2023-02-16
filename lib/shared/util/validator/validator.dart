@@ -1,3 +1,5 @@
+//#GROUP_TEMPLATE class
+//#TEMPLATE class_validator
 class Validator {
   static String? rule(
     String? value, {
@@ -9,6 +11,7 @@ class Validator {
     return null;
   }
 
+  //!String validator
   static String? required(
     dynamic value, {
     String? fieldName,
@@ -44,6 +47,7 @@ class Validator {
     return null;
   }
 
+  //!List validator
   static String? atLeastOneitem(List<Map<String, dynamic>> items) {
     var checkedItems = items.where((i) => i["checked"] == true).toList();
     if (checkedItems.isEmpty) {
@@ -52,3 +56,4 @@ class Validator {
     return null;
   }
 }
+//#END

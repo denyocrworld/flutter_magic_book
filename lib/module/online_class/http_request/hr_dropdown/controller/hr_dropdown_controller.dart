@@ -40,5 +40,20 @@ class HrDropdownController extends State<HrDropdownView>
       });
     }
     setState(() {});
+
+    /*
+    {
+      "id": 1,
+      "email": "george.bluth@reqres.in",
+      "first_name": "George",
+      "last_name": "Bluth",
+      "avatar": "https://reqres.in/img/faces/1-image.jpg"
+    },
+
+    {
+                    "label": "Admin",
+                    "value": 1,
+    },
+    */
   }
 }

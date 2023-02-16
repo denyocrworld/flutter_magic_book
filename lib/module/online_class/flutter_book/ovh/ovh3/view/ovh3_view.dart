@@ -8,6 +8,11 @@ class Ovh3View extends StatefulWidget {
   Widget build(context, Ovh3Controller controller) {
     controller.view = this;
 
+    /*
+    Perbaiki kode dibawah ini agar tidak overflow,
+    Gunakan Expanded pada Text atau SingleChildScrollView dengan Axis Horizontal!
+    
+    */
     return Scaffold(
       appBar: AppBar(
         title: const Text("Ovh3"),

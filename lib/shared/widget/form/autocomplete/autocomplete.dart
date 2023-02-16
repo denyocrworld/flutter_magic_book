@@ -37,6 +37,7 @@ class _QAutoCompleteState extends State<QAutoComplete> {
     return LayoutBuilder(builder: (context, constraints) {
       return FormField(
           initialValue: false,
+          // validator: (value) => widget.validator!(items),
           enabled: true,
           builder: (field) {
             return Autocomplete<Map>(
@@ -50,6 +51,7 @@ class _QAutoCompleteState extends State<QAutoComplete> {
                   decoration: InputDecoration(
                     labelText: widget.label,
                     errorText: field.errorText,
+                    // border: InputBorder.none,
                     suffixIcon: const Icon(Icons.search),
                     helperText: widget.hint,
                   ),
@@ -59,6 +61,7 @@ class _QAutoCompleteState extends State<QAutoComplete> {
                 text: items.first["label"],
               ),
               onSelected: (Map map) {
+                //selected value
                 String? label = map["label"];
                 dynamic value = map["value"];
                 widget.onChanged(value, label);
@@ -87,11 +90,13 @@ class _QAutoCompleteState extends State<QAutoComplete> {
                     ),
                     child: Container(
                       width: constraints.biggest.width,
+                      // width: MediaQuery.of(context).size.width,
                       margin: const EdgeInsets.only(top: 10.0),
                       child: Wrap(
                         children: [
                           Container(
                             decoration: BoxDecoration(
+                              // color: Colors.grey[100],
                               color: Theme.of(globalContext)
                                   .scaffoldBackgroundColor,
                               borderRadius: const BorderRadius.all(

@@ -21,6 +21,14 @@ class SmLoadingController extends State<SmLoadingView>
 
   bool loading = false;
   updateLoadingState() {
+    // if (loading == true) {
+    //   loading = false;
+    // } else {
+    //   loading = true;
+    // }
+
+    // loading = loading ? false : true;
+
     loading = !loading;
     setState(() {});
   }

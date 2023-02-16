@@ -17,6 +17,7 @@ class FbWrapCategoryListView extends StatefulWidget {
         padding: const EdgeInsets.all(10.0),
         child: Column(
           children: [
+            //Ctrl+Shift+ALT+W
             SizedBox(
               height: 70.0,
               width: MediaQuery.of(context).size.width,

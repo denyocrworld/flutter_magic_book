@@ -1,6 +1,40 @@
 import 'package:flutter/material.dart';
 import 'core.dart';
 
+/*
+Performa
+Flutter > React | Android or IOS
+React > Flutter | Web
+
+Kemudahan
+Flutter > React
+
+Fulltime - Flutter
+Freelance - Fullstack
+
+Front END
+  - Bisa bikin UI
+  - Consume API
+
+  (Optional)
+  - Testing
+  - Deploy
+
+Back END
+  - Bisa bikin API  
+      - API Login and get token
+      - Middleware
+  - Bisa bikin Dokumentasi
+
+TIPS:
+- Banyakin latihan
+- Kurangi membaca, dan perbanyak latihan
+
+
+100 Jam Ngoding = Bisa Ngoding
+
+
+*/
 Widget debugView({
   required BuildContext context,
   required bool visible,

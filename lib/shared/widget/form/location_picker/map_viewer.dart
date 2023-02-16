@@ -37,7 +37,10 @@ class _MapViewerState extends State<MapViewer> {
         FlutterMap(
           mapController: widget.controller,
           options: MapOptions(
+            // center: LatLng(-6.200000, 106.816666),
+            // center: LatLng(-6.307332470724814, 106.82061421166996),
             center: LatLng(latitude, longitude),
+            // center: LatLng(51.509364, -0.128928),
             zoom: 13.0,
             onPositionChanged: (pos, _) {
               if (widget.onPositionChanged != null) {
@@ -50,6 +53,18 @@ class _MapViewerState extends State<MapViewer> {
               urlTemplate: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
               userAgentPackageName: 'com.example.app',
             ),
+            // MarkerLayer(
+            //   markers: [
+            //     Marker(
+            //       width: 80.0,
+            //       height: 80.0,
+            //       point: LatLng(51.5, -0.09),
+            //       builder: (ctx) => Container(
+            //         child: const FlutterLogo(),
+            //       ),
+            //     ),
+            //   ],
+            // ),
           ],
         ),
         Align(

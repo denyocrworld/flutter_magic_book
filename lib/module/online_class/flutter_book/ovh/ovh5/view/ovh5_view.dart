@@ -18,6 +18,10 @@ class Ovh5View extends StatefulWidget {
           padding: const EdgeInsets.all(10.0),
           child: Column(
             children: [
+              /*
+              Perbaiki overflow ini, font yang digunakan terlalu besar!
+              Kecilkan agar tidak overflow!
+              */
               Container(
                 color: Colors.red,
                 width: 80.0,
@@ -44,6 +48,11 @@ class Ovh5View extends StatefulWidget {
               const SizedBox(
                 height: 30.0,
               ),
+              /*
+              Perbaiki overflow ini, font yang digunakan terlalu besar!
+              Tapi kita tidak ingin mengecilkan font-nya.
+              Bungkus Text dengan Expanded!
+              */
               Container(
                 color: Colors.red,
                 width: 80.0,

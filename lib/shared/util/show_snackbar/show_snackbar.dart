@@ -1,6 +1,18 @@
 import 'package:hyper_ui/core.dart';
 import 'package:flutter/material.dart';
 
+// var bgColor = const Color(0xFF212332);
+// var defaultPadding = 16.0;
+// var primaryColor = Colors.blueGrey[800]!;
+// var secondaryColor = const Color(0xFF2A2D3E);
+// var dangerColor = Colors.red[300]!;
+// var successColor = Colors.green[300]!;
+// var infoColor = Colors.blue[300]!;
+// var warningColor = Colors.orange[300]!;
+// var disabledColor = Colors.grey[300]!;
+// var disabledTextColor = Colors.grey[800];
+
+//basic alert
 snackbarPrimary({required String message, int duration = 4}) {
   var snackBar = SnackBar(
     duration: Duration(seconds: duration),
@@ -84,7 +96,9 @@ snackbarWarning({required String message, int duration = 4}) {
   );
   ScaffoldMessenger.of(globalContext).showSnackBar(snackBar);
 }
+//end basic alert
 
+//softalert
 snackbarSoftPrimary({required String message, int duration = 4}) {
   var snackBar = SnackBar(
     duration: Duration(seconds: duration),
@@ -342,7 +356,9 @@ snackbarSoftWarning({required String message, int duration = 4}) {
   );
   ScaffoldMessenger.of(globalContext).showSnackBar(snackBar);
 }
+//endsoft alert
 
+//icons alert
 snackbarIconSoftPrimary(
     {required String message,
     int duration = 4,
@@ -451,6 +467,7 @@ snackbarIconSoftSecondary(
   ScaffoldMessenger.of(globalContext).showSnackBar(snackBar);
 }
 
+//icons alert
 snackbarIconSoftSuccess(
     {required String message,
     int duration = 4,
@@ -559,6 +576,7 @@ snackbarIconSoftDanger(
   ScaffoldMessenger.of(globalContext).showSnackBar(snackBar);
 }
 
+//icons alert
 snackbarIconSoftInfo(
     {required String message,
     int duration = 4,
@@ -613,6 +631,7 @@ snackbarIconSoftInfo(
   ScaffoldMessenger.of(globalContext).showSnackBar(snackBar);
 }
 
+//icons alert
 snackbarIconSoftWarning(
     {required String message,
     int duration = 4,
@@ -667,6 +686,7 @@ snackbarIconSoftWarning(
   ScaffoldMessenger.of(globalContext).showSnackBar(snackBar);
 }
 
+//alert icon basic
 snackbarIconPrimary(
     {required String message,
     int duration = 4,

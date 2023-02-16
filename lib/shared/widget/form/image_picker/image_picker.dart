@@ -217,6 +217,8 @@ class _QImagePickerState extends State<QImagePicker> {
                 builder: (FormFieldState<bool> field) {
                   return TextFormField(
                     controller: controller,
+                    // validator: widget.validator,
+
                     obscureText: widget.obscure,
                     readOnly: true,
                     decoration: InputDecoration(

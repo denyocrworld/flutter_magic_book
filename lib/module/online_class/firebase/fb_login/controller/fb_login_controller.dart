@@ -31,7 +31,7 @@ class FbLoginController extends State<FbLoginView> implements MvcController {
       );
 
       hideLoading();
-
+      //fireuser
       print(FirebaseAuth.instance.currentUser!.uid);
       showInfoDialog("Berhasil login!");
     } on Exception catch (err) {
@@ -73,7 +73,8 @@ class FbLoginController extends State<FbLoginView> implements MvcController {
         var userCredential =
             await FirebaseAuth.instance.signInWithCredential(credential);
         debugPrint("userCredential: $userCredential");
-
+        //TODO: on login success
+        //------------------
         showInfoDialog("Berhasil login!");
       } catch (_) {}
     } on Exception catch (err) {

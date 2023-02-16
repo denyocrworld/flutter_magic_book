@@ -5,6 +5,7 @@ class HrLoginController extends State<HrLoginView> implements MvcController {
   static late HrLoginController instance;
   late HrLoginView view;
 
+  // String? name;
   late String name;
 
   @override
@@ -42,13 +43,20 @@ class HrLoginController extends State<HrLoginView> implements MvcController {
     print(obj);
 
     if (obj["success"] == true) {
+      //berhasil login
       showInfoDialog("Berhasil login!");
     } else {
+      //gagal login
       showInfoDialog("Gagal login!");
     }
   }
 
   doSomething() async {
+    // await createProduct();
+    // await deleteProduct(4);
+    // await updateProduct(1, {
+    //   "product_name": "Kopi Moccacino",
+    // });
     await getProducts();
   }
 

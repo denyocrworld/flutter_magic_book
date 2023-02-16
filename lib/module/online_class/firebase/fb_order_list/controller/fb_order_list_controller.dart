@@ -20,6 +20,7 @@ class FbOrderListController extends State<FbOrderListView>
   Widget build(BuildContext context) => widget.build(context, this);
 
   doGenerate() async {
+    //firedeleteall
     var snapshot =
         await FirebaseFirestore.instance.collection("customers").get();
     for (var i = 0; i < snapshot.docs.length; i++) {
@@ -28,9 +29,10 @@ class FbOrderListController extends State<FbOrderListView>
           .doc(snapshot.docs[i].id)
           .delete();
     }
-
+    //fireadd
     for (var i = 0; i < 10; i++) {
       await FirebaseFirestore.instance.collection("customers").add({
+        // "created_at": DateTime.now(),
         "created_at": Timestamp.now(),
         "name": "Anang Hermansyah $i",
         "city": "Jakarta $i",

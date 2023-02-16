@@ -19,6 +19,16 @@ class FbListController extends State<FbListView> implements MvcController {
   Widget build(BuildContext context) => widget.build(context, this);
 
   doGenerate() async {
+    //firedeleteall
+    // var snapshot =
+    //     await FirebaseFirestore.instance.collection("customers").get();
+    // for (var i = 0; i < snapshot.docs.length; i++) {
+    //   await FirebaseFirestore.instance
+    //       .collection("customers")
+    //       .doc(snapshot.docs[i].id)
+    //       .delete();
+    // }
+    //fireadd
     for (var i = 0; i < 10; i++) {
       await FirebaseFirestore.instance.collection("customers").add({
         "name": "Anang Hermansyah $i",

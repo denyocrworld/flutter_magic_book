@@ -1,6 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:hyper_ui/core.dart';
 
+/*
+1. Record ketika temen2 menjalankan aplikasi-nya, sambil ditunjukin satu per satu
+(Silahkan pake .obs,), boleh sambil nunjukin kode-nya.
+
+2. Upload ke YOUTUBE
+
+3. Link-nya di taro di Excell
+(Link Spreadsheet-nya menyusul di Grup)
+*/
 class ExlDashboard1View extends StatefulWidget {
   const ExlDashboard1View({Key? key}) : super(key: key);
 
@@ -77,6 +86,7 @@ class ExlDashboard1View extends StatefulWidget {
               height: 12.0,
             ),
             Row(
+              // mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: const [
                 Expanded(
                   child: Text(
@@ -178,6 +188,55 @@ class ExlDashboard1View extends StatefulWidget {
                       }),
                     );
                   }),
+                  // SizedBox(
+                  //   height: 12.0,
+                  // ),
+                  // GridView.builder(
+                  //   gridDelegate:
+                  //       SliverGridDelegateWithFixedCrossAxisCount(
+                  //     crossAxisCount: 2,
+                  //     mainAxisSpacing: 6,
+                  //     crossAxisSpacing: 6,
+                  //     childAspectRatio: 1.0,
+                  //     mainAxisExtent: 46,
+                  //   ),
+                  //   itemCount: controller.categories.length,
+                  //   shrinkWrap: true,
+                  //   physics: ScrollPhysics(),
+                  //   itemBuilder: (BuildContext context, int index) {
+                  //     var item = controller.categories[index];
+                  //     return Container(
+                  //       padding: EdgeInsets.symmetric(
+                  //         vertical: 12.0,
+                  //         horizontal: 16.0,
+                  //       ),
+                  //       decoration: BoxDecoration(
+                  //         color: Color(0xffC4CACC),
+                  //         borderRadius: BorderRadius.all(
+                  //           Radius.circular(
+                  //             6.0,
+                  //           ),
+                  //         ),
+                  //       ),
+                  //       child: Row(
+                  //         children: [
+                  //           Text(
+                  //             "$item",
+                  //             style: TextStyle(
+                  //               fontSize: 14.0,
+                  //               fontWeight: FontWeight.bold,
+                  //             ),
+                  //           ),
+                  //           Spacer(),
+                  //           Icon(
+                  //             Icons.chevron_right,
+                  //             size: 24.0,
+                  //           ),
+                  //         ],
+                  //       ),
+                  //     );
+                  //   },
+                  // ),
                   const SizedBox(
                     height: 20.0,
                   ),
@@ -187,6 +246,7 @@ class ExlDashboard1View extends StatefulWidget {
                   const SizedBox(
                     height: 12.0,
                   ),
+                  //ALT+SHIFT+H
                   SizedBox(
                     height: 80.0 + 160,
                     child: ListView.builder(

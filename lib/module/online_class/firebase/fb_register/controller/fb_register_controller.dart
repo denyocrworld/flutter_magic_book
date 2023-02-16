@@ -22,6 +22,7 @@ class FbRegisterController extends State<FbRegisterView>
   String email = "";
   String password = "";
   doLogin() async {
+    //Alt+SHIFT+I ==> Smart Import
     try {
       await FirebaseAuth.instance.createUserWithEmailAndPassword(
         email: email,
@@ -34,4 +35,7 @@ class FbRegisterController extends State<FbRegisterView>
       showInfoDialog("Signup Failed!");
     }
   }
+
+  //Controller
+  //Service
 }

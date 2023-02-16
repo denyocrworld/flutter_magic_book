@@ -1,3 +1,4 @@
+//#GROUP_TEMPLATE theme
 import 'package:hyper_ui/core.dart';
 import 'package:flutter/material.dart';
 
@@ -19,6 +20,7 @@ var disabledColor = Colors.grey[300]!;
 
 var disabledTextColor = Colors.grey[800];
 
+//#_!#$O!_@$
 Color appbarBackgroundColor = Colors.white;
 Color scaffoldBackgroundColor = Colors.grey[300]!;
 MaterialColor primarySwatch = Colors.blueGrey;
@@ -28,7 +30,9 @@ Color drawerFontColor = Colors.grey[300]!;
 
 double cardElevation = 2.0;
 double cardBorderRadius = 24.0;
+//#!$O!@)$1@#
 
+//Text Heading Size
 const double h1 = 36;
 const double h2 = 30;
 const double h3 = 24;
@@ -36,6 +40,7 @@ const double h4 = 20;
 const double h5 = 16;
 const double h6 = 14;
 
+//Font size
 const double fs1 = 36;
 const double fs2 = 30;
 const double fs3 = 24;
@@ -43,8 +48,11 @@ const double fs4 = 20;
 const double fs5 = 16;
 const double fs6 = 14;
 
+//---
 const defaultRadius = 20;
+//---
 
+//Text
 Color textColor1 = const Color(0xff101828);
 Color textColor2 = Colors.grey[600]!;
 Color textColor3 = Colors.grey[500]!;
@@ -52,6 +60,7 @@ Color textColor4 = Colors.grey[500]!;
 Color textColor5 = Colors.grey[300]!;
 Color textColor6 = Colors.grey[200]!;
 
+//Icon
 Color iconColor1 = const Color(0xff101828);
 Color iconColor2 = Colors.grey[600]!;
 Color iconColor3 = Colors.grey[500]!;
@@ -59,18 +68,21 @@ Color iconColor4 = Colors.grey[500]!;
 Color iconColor5 = Colors.grey[300]!;
 Color iconColor6 = Colors.grey[200]!;
 
+//Height
 const double hxs = 30;
 const double hsm = 40;
 const double hmd = 50;
 const double hlg = 60;
 const double hxl = 70;
 
+//Width
 const double wxs = 30;
 const double wsm = 40;
 const double wmd = 50;
 const double wlg = 60;
 const double wxl = 70;
 
+//Width
 double get w100 {
   return MediaQuery.of(globalContext).size.width;
 }
@@ -111,6 +123,7 @@ double get w10 {
   return MediaQuery.of(globalContext).size.width * 0.1;
 }
 
+//Radius
 const double rxs = 6;
 const double rsm = 12;
 const double rmd = 20;

@@ -1,3 +1,5 @@
+// ignore_for_file: camel_case_types, prefer_typing_uninitialized_variables
+
 import 'package:flutter/material.dart';
 
 class AwesomeMenu extends StatefulWidget {
@@ -59,6 +61,11 @@ class _AwesomeMenuState extends State<AwesomeMenu> {
                       crossAxisAlignment: CrossAxisAlignment.center,
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
+                        // if (isSelected)
+                        //   const CircleAvatar(
+                        //     radius: 4.0,
+                        //     backgroundColor: Colors.orange,
+                        //   ),
                         Text(
                           item,
                           style: TextStyle(

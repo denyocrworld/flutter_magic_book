@@ -107,6 +107,7 @@ class _QLocationPickerState extends State<QLocationPicker>
         }
         return null;
       },
+      // validator: (value) => validate(items),
       enabled: true,
       builder: (FormFieldState<bool> field) {
         return InputDecorator(

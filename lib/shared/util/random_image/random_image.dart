@@ -1,6 +1,9 @@
 import 'package:faker_dart/faker_dart.dart';
 
 extension RandomImageExtension on Faker {
+  //gambar yang di generate faker sering bermasalah,
+  //So, kita menggunakan kode ini
+
   generateRandomImage() {
     List images = [
       "https://i.ibb.co/n8m5gq5/photo-1521305916504-4a1121188589-crop-entropy-cs-tinysrgb-fit-max-fm-jpg-ixid-Mnwy-ODA4-ODh8-MHwxf-H.jpg",

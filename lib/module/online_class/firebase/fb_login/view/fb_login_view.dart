@@ -12,9 +12,11 @@ class FbLoginView extends StatefulWidget {
         title: const Text("FbLogin"),
         actions: const [],
       ),
+      //CTRL+SHIFT+ALT+R
       body: Container(
         padding: const EdgeInsets.all(20.0),
         child: Column(
+          //ALT+SHIFT+ENTER
           children: [
             Card(
               child: Padding(

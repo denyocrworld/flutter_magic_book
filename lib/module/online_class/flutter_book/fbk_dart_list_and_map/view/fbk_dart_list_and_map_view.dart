@@ -7,34 +7,34 @@ class FbkDartListAndMapView extends StatefulWidget {
   bool exercise1() {
     List<double> sales = [12.5, 20.0, 15.0, 10.0, 5.0];
     double? total;
-
+    //Tuliskan kode untuk menghitung total penjualan dan simpan dalam variabel `total`
     return total == 62.5;
   }
 
   bool exercise2() {
     List<double> sales = [12.5, 20.0, 15.0, 10.0, 5.0];
-
+    //Tulis kode untuk menghitung average penjualan dan tampung ke variable di bawah ini
     double? average = 0;
     return average == 12.5;
   }
 
   bool exercise3() {
     List<int> numbers = [1, 2, 3, 4, 5];
-
+    //Tulis kode untuk menghitung nilai tertinggi dari list numbers dan tampung ke variable di bawah ini
     int? highest = 0;
     return highest == 5;
   }
 
   bool exercise4() {
     List<int> numbers = [1, 2, 3, 4, 5];
-
+    //Tulis kode untuk menghitung nilai terendah dari list numbers dan tampung ke variable di bawah ini
     int? lowest = 0;
     return lowest == 1;
   }
 
   bool exercise5() {
     List<int> numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-
+    //Tulis kode untuk menghitung jumlah angka genap dan tampung ke variable di bawah ini
     int? even = 0;
 
     return even == 30;
@@ -42,7 +42,7 @@ class FbkDartListAndMapView extends StatefulWidget {
 
   bool exercise6() {
     List<int> numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-
+    //Tulis kode untuk menghitung jumlah angka ganjil dan tampung ke variable di bawah ini
     int? odd = 0;
 
     return odd == 25;
@@ -50,7 +50,7 @@ class FbkDartListAndMapView extends StatefulWidget {
 
   bool exercise7() {
     List<int> numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-
+    //Tulis kode untuk mencari angka terbesar dan tampung ke variable di bawah ini
     int? largest = 0;
 
     return largest == 10;
@@ -58,7 +58,7 @@ class FbkDartListAndMapView extends StatefulWidget {
 
   bool exercise8() {
     List<int> numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-
+    //Tulis kode untuk mencari angka terkecil dan tampung ke variable di bawah ini
     int? smallest = 0;
 
     return smallest == 1;
@@ -66,7 +66,7 @@ class FbkDartListAndMapView extends StatefulWidget {
 
   bool exercise9() {
     List<int> numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-
+    //Tulis kode untuk menghitung jumlah angka yang lebih besar dari 5 dan tampung ke variable di bawah ini
     int? above = 0;
 
     return above == 5;
@@ -74,7 +74,7 @@ class FbkDartListAndMapView extends StatefulWidget {
 
   bool exercise10() {
     List<int> numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-
+    //Tulis kode untuk menghitung jumlah angka yang lebih kecil dari 5 dan tampung ke variable di bawah ini
     int? below = 0;
 
     return below == 4;
@@ -82,73 +82,75 @@ class FbkDartListAndMapView extends StatefulWidget {
 
   bool exercise11() {
     List<String> fruits = ["apple", "banana", "cherry", "date", "elderberry"];
-
+    //Tulis kode untuk menentukan apakah ada buah yang dimulai dengan huruf "e"
     bool? result;
     return result == true;
   }
 
   bool exercise12() {
     List<int> numbers = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100];
-
+    //Tulis kode untuk menentukan apakah semua angka dalam list adalah kelipatan 10
     bool? result;
     return result == true;
   }
 
   bool exercise13() {
     List<String> cars = ["Audi", "BMW", "Chevrolet", "Dodge", "Ferrari"];
-
+    //Tulis kode untuk menentukan apakah ada mobil yang namanya memiliki 5 huruf
     bool? result;
     return result == true;
   }
 
   bool exercise14() {
     List<double> temperatures = [32.0, 35.6, 37.2, 39.8, 40.0];
-
+    //Tulis kode untuk menentukan apakah ada suhu dalam list yang sama dengan 40.0
     bool? result;
     return result == true;
   }
 
   bool exercise15() {
     List<String> animals = ["cat", "dog", "elephant", "fish", "giraffe"];
-
+    //Tulis kode untuk menentukan apakah ada hewan dalam list yang namanya memiliki 5 huruf
     bool? result;
     return result == true;
   }
 
   bool exercise16() {
     List<String> names = ["John", "Jane", "Jim", "Jenny", "Jake"];
-
+    //Tulis kode untuk menentukan apakah ada nama di dalam list yang memiliki huruf "J" sebagai huruf pertama
     bool? result;
     return result == true;
   }
 
   bool exercise17() {
     List<int> numbers = [3, 7, 12, 24, 35, 48, 63, 80];
-
+    //Tulis kode untuk menentukan apakah ada angka di dalam list yang habis dibagi 7
     bool? result;
     return result == true;
   }
 
   bool exercise18() {
     List<int> numbers = [3, 5, 8, 13, 21, 34, 55, 89];
-
+    //Tulis kode untuk menentukan apakah ada angka di dalam list yang merupakan fibonacci number
     bool? result;
     return result == true;
   }
 
   bool exercise19() {
     List<String> words = ["apple", "banana", "cherry", "date", "elderberry"];
-
+    //Tulis kode untuk menentukan apakah ada kata di dalam list yang memiliki jumlah huruf yang sama
     bool? result;
     return result == true;
   }
 
   bool exercise20() {
     List<int> numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-
+    //Tulis kode untuk menentukan apakah ada angka di dalam list yang merupakan bilangan prima
     bool? result;
     return result == true;
   }
+
+  //----
 
   bool exercise21() {
     List<Map<String, dynamic>> employeeSalaries = [
@@ -158,7 +160,7 @@ class FbkDartListAndMapView extends StatefulWidget {
       {"name": "Jake", "salary": 8000},
       {"name": "Jerry", "salary": 9000},
     ];
-
+    //Tulis kode untuk menentukan apakah ada karyawan yang memiliki gaji di atas 9000
     bool? result;
     return result == true;
   }
@@ -171,7 +173,7 @@ class FbkDartListAndMapView extends StatefulWidget {
       {"name": "Jake", "salary": 8000},
       {"name": "Jerry", "salary": 9000},
     ];
-
+    //Tulis kode untuk menghitung total gaji semua karyawan
     double? total;
     return total == 35000;
   }
@@ -184,7 +186,7 @@ class FbkDartListAndMapView extends StatefulWidget {
       {"name": "Jake", "salary": 8000},
       {"name": "Jerry", "salary": 9000},
     ];
-
+    //Tulis kode untuk menentukan nama karyawan yang memiliki gaji terendah
     String? result;
     return result == "John";
   }
@@ -197,7 +199,7 @@ class FbkDartListAndMapView extends StatefulWidget {
       {"name": "Jake", "salary": 8000},
       {"name": "Jerry", "salary": 9000},
     ];
-
+    //Tulis kode untuk menentukan nama karyawan yang memiliki gaji tertinggi
     String? result;
     return result == "Jerry";
   }
@@ -210,7 +212,7 @@ class FbkDartListAndMapView extends StatefulWidget {
       {"name": "Jake", "salary": 8000},
       {"name": "Jerry", "salary": 9000},
     ];
-
+    //Tulis kode untuk menentukan apakah ada karyawan yang memiliki gaji sama
     bool? result;
     return result == false;
   }
@@ -224,6 +226,7 @@ class FbkDartListAndMapView extends StatefulWidget {
       {"name": "Jill", "salary": 5500},
     ];
 
+    // Tulis kode untuk menentukan apakah ada karyawan dengan gaji 6000
     bool? result;
     return result == true;
   }
@@ -237,6 +240,7 @@ class FbkDartListAndMapView extends StatefulWidget {
       {"name": "Jill", "salary": 5500},
     ];
 
+    // Tulis kode untuk menghitung jumlah gaji karyawan
     double? totalSalary = 0;
     return totalSalary == 24000;
   }
@@ -250,6 +254,7 @@ class FbkDartListAndMapView extends StatefulWidget {
       {"name": "Jill", "salary": 5500},
     ];
 
+    // Tulis kode untuk menentukan gaji tertinggi karyawan
     double? highestSalary = 0;
     return highestSalary == 6000;
   }
@@ -263,6 +268,7 @@ class FbkDartListAndMapView extends StatefulWidget {
       {"name": "Jill", "salary": 5500},
     ];
 
+    // Tulis kode untuk menentukan gaji terendah karyawan
     double? lowestSalary = 0;
     return lowestSalary == 4500;
   }
@@ -273,7 +279,7 @@ class FbkDartListAndMapView extends StatefulWidget {
       {"name": "Jane", "salary": 6000},
       {"name": "Jim", "salary": 7000}
     ];
-
+    //Tulis kode untuk menentukan apakah ada karyawan yang gaji di atas 6000
     bool? result;
     return result == true;
   }
@@ -284,7 +290,7 @@ class FbkDartListAndMapView extends StatefulWidget {
       {"name": "Jane", "salary": 6000},
       {"name": "Jim", "salary": 7000}
     ];
-
+    //Tulis kode untuk menghitung rata-rata gaji karyawan
     double? average;
     return average == 6000;
   }
@@ -295,7 +301,7 @@ class FbkDartListAndMapView extends StatefulWidget {
       {"name": "Jane", "salary": 6000},
       {"name": "Jim", "salary": 7000}
     ];
-
+    //Tulis kode untuk menentukan nama karyawan dengan gaji tertinggi
     String? name;
     return name == "Jim";
   }
@@ -306,7 +312,7 @@ class FbkDartListAndMapView extends StatefulWidget {
       {"name": "Jane", "salary": 6000},
       {"name": "Jim", "salary": 7000}
     ];
-
+    //Tulis kode untuk menentukan nama karyawan dengan gaji terendah
     String? name;
     return name == "John";
   }
@@ -317,7 +323,7 @@ class FbkDartListAndMapView extends StatefulWidget {
       {"name": "Jane", "salary": 6000},
       {"name": "Jim", "salary": 7000}
     ];
-
+    //Tulis kode untuk menambahkan karyawan baru dengan nama 'Jack' dan gaji 8000
     return employeeSalaries.length == 4 &&
         employeeSalaries[3]["name"] == "Jack" &&
         employeeSalaries[3]["salary"] == 8000;
@@ -331,7 +337,7 @@ class FbkDartListAndMapView extends StatefulWidget {
       {"name": "Jack", "salary": 3000, "position": "QA"},
       {"name": "Jill", "salary": 2500, "position": "Intern"},
     ];
-
+    //Tulis kode untuk menghitung jumlah gaji karyawan dan tampung ke variable di bawah ini
     int? totalSalary;
     return totalSalary == 15000;
   }
@@ -344,7 +350,7 @@ class FbkDartListAndMapView extends StatefulWidget {
       {"name": "Jack", "salary": 3000, "position": "QA"},
       {"name": "Jill", "salary": 2500, "position": "Intern"},
     ];
-
+    //Tulis kode untuk menentukan nama karyawan dengan gaji tertinggi dan tampung ke variable di bawah ini
     String? highestPaidEmployee;
     return highestPaidEmployee == "John";
   }
@@ -357,7 +363,7 @@ class FbkDartListAndMapView extends StatefulWidget {
       {"name": "Jack", "salary": 3000, "position": "QA"},
       {"name": "Jill", "salary": 2500, "position": "Intern"},
     ];
-
+    //Tulis kode untuk menentukan nama karyawan dengan gaji terendah dan tampung ke variable di bawah ini
     String? lowestPaidEmployee;
     return lowestPaidEmployee == "Jill";
   }
@@ -370,7 +376,7 @@ class FbkDartListAndMapView extends StatefulWidget {
       {"name": "Jack", "salary": 3000, "position": "QA"},
       {"name": "Jill", "salary": 2500, "position": "Intern"},
     ];
-
+    //Tulis kode untuk menentukan berapa banyak karyawan yang memiliki gaji di atas 4000 dan tampung ke variable di bawah ini
     int? employeeCount;
     return employeeCount == 2;
   }
@@ -381,7 +387,7 @@ class FbkDartListAndMapView extends StatefulWidget {
       {'name': 'Jane', 'age': 25, 'salary': 4000},
       {'name': 'Jim', 'age': 35, 'salary': 6000},
     ];
-
+    //Tulis kode untuk menghitung rata-rata usia karyawan dan tampung ke variabel di bawah ini
     double? averageAge;
     return averageAge == 31.67;
   }
@@ -392,7 +398,7 @@ class FbkDartListAndMapView extends StatefulWidget {
       {'name': 'Jane', 'age': 25, 'salary': 4000},
       {'name': 'Jim', 'age': 35, 'salary': 6000},
     ];
-
+    //Tulis kode untuk menentukan karyawan dengan gaji tertinggi dan tampung ke variabel di bawah ini
     Map<String, dynamic>? highestPaidEmployee;
     return highestPaidEmployee == {'name': 'Jim', 'age': 35, 'salary': 6000};
   }
@@ -403,7 +409,7 @@ class FbkDartListAndMapView extends StatefulWidget {
       {'name': 'Jane', 'age': 25, 'salary': 4000},
       {'name': 'Jim', 'age': 35, 'salary': 6000},
     ];
-
+    //Tulis kode untuk menentukan berapa jumlah karyawan yang memiliki usia di atas 30 tahun dan tampung ke variabel di bawah ini
     int? countOver30;
     return countOver30 == 2;
   }
@@ -414,7 +420,7 @@ class FbkDartListAndMapView extends StatefulWidget {
       {"name": "Jane", "salary": 4000, "position": "Supervisor"},
       {"name": "Jim", "salary": 3500, "position": "Staff"}
     ];
-
+    //Tulis kode untuk menentukan apakah ada karyawan dengan posisi Manager
     bool? result;
     return result == true;
   }
@@ -425,7 +431,7 @@ class FbkDartListAndMapView extends StatefulWidget {
       {"name": "Jane", "salary": 4000, "position": "Supervisor"},
       {"name": "Jim", "salary": 3500, "position": "Staff"}
     ];
-
+    //Tulis kode untuk menentukan gaji tertinggi dari karyawan
     double? highestSalary;
     return highestSalary == 5000;
   }
@@ -436,7 +442,7 @@ class FbkDartListAndMapView extends StatefulWidget {
       {"name": "Jane", "salary": 4000, "position": "Supervisor"},
       {"name": "Jim", "salary": 3500, "position": "Staff"}
     ];
-
+    //Tulis kode untuk menentukan berapa banyak karyawan dengan gaji di atas 4000
     int? employeesAboveSalary;
     return employeesAboveSalary == 2;
   }
@@ -464,7 +470,7 @@ class FbkDartListAndMapView extends StatefulWidget {
         "pages": 464,
       },
     ];
-
+    //Tulis kode untuk menghitung jumlah halaman buku
     int? totalPages;
     return totalPages == 1254;
   }
@@ -492,7 +498,7 @@ class FbkDartListAndMapView extends StatefulWidget {
         "pages": 464,
       },
     ];
-
+    //Tulis kode untuk menentukan apakah ada buku dengan jumlah halaman di atas 300
     bool? result;
     return result == true;
   }
@@ -520,7 +526,7 @@ class FbkDartListAndMapView extends StatefulWidget {
         "pages": 464,
       },
     ];
-
+    //Tulis kode untuk menentukan buku dengan jumlah halaman terendah
     Map<String, dynamic>? result;
     return result ==
         {
@@ -564,6 +570,7 @@ class FbkDartListAndMapView extends StatefulWidget {
       },
     ];
 
+    // Tuliskan kode untuk menentukan apakah ada employee dengan gaji di atas 10.000 dan usia di bawah 30 tahun
     bool? result;
     return result == true;
   }
@@ -595,7 +602,7 @@ class FbkDartListAndMapView extends StatefulWidget {
         "isRead": false
       }
     ];
-
+//Tulis kode untuk menghitung jumlah halaman buku yang sudah dibaca
     int? totalPagesRead;
     return totalPagesRead == 630;
   }
@@ -627,7 +634,7 @@ class FbkDartListAndMapView extends StatefulWidget {
         "isRead": false
       }
     ];
-
+//Tulis kode untuk menentukan apakah ada buku yang dibaca oleh penulis Jane Austen
     bool? isAustenRead;
     return isAustenRead == true;
   }
@@ -659,7 +666,7 @@ class FbkDartListAndMapView extends StatefulWidget {
         "isRead": false
       }
     ];
-
+    //Tulis kode untuk menentukan apakah semua buku sudah dibaca atau belum
     bool? areAllBooksRead;
     return areAllBooksRead == false;
   }
@@ -687,7 +694,7 @@ class FbkDartListAndMapView extends StatefulWidget {
         "quantity": 4,
       },
     ];
-
+    // Tulis kode untuk menghitung total belanja dan tampung ke variable di bawah ini
     double? total = 0;
     return total == 225.0;
   }
@@ -716,6 +723,7 @@ class FbkDartListAndMapView extends StatefulWidget {
       }
     ];
 
+    // Tulis kode untuk memfilter buku yang memiliki jumlah halaman lebih dari 350 dan memasukkan ke dalam variabel filteredBooks
     List<Map<String, dynamic>> filteredBooks = [];
     return filteredBooks.length == 2;
   }
@@ -744,6 +752,7 @@ class FbkDartListAndMapView extends StatefulWidget {
       },
     ];
 
+    // Tulis kode untuk memeriksa apakah ada karyawan yang berumur lebih dari 35 tahun
     bool hasOlderEmployee = false;
 
     return hasOlderEmployee;
@@ -777,8 +786,10 @@ class FbkDartListAndMapView extends StatefulWidget {
       }
     ];
 
+    // Tulis kode untuk mengecek apakah ada karyawan yang memiliki skill "Debugging" dan "Code Review"
     bool hasDebuggerAndCodeReviewer = false;
 
+    // return hasil dari hasDebuggerAndCodeReviewer
     return hasDebuggerAndCodeReviewer;
   }
 
@@ -806,6 +817,9 @@ class FbkDartListAndMapView extends StatefulWidget {
       },
     ];
 
+    // Tuliskan kode untuk menghapus data employee dengan nama "Jack"
+
+    // return true jika data employee dengan nama "Jack" sudah terhapus
     return !employees.any((e) => e["name"] == "Jack");
   }
 
@@ -832,7 +846,9 @@ class FbkDartListAndMapView extends StatefulWidget {
         "position": "Designer",
       },
     ];
+    // Tuliskan kode untuk melakukan sorting data employee berdasarkan usia (age) secara ascending
 
+    // return true jika data employee sudah terurut berdasarkan usia
     return employees.every((e) =>
         e == employees.first ||
         e["age"] >= employees[employees.indexOf(e) - 1]["age"]);
@@ -862,6 +878,7 @@ class FbkDartListAndMapView extends StatefulWidget {
       },
     ];
 
+    // Tuliskan kode untuk menentukan employee tertua dan tampung ke variable di bawah ini
     Map<String, dynamic>? oldestEmployee;
 
     return oldestEmployee == {"name": "Jack", "age": 41, "position": "CTO"};
@@ -895,6 +912,7 @@ class FbkDartListAndMapView extends StatefulWidget {
       },
     ];
 
+    // Tuliskan kode untuk menentukan employee dengan gaji tertinggi dan tampung ke variable di bawah ini
     Map<String, dynamic>? highestPaidEmployee;
 
     return highestPaidEmployee ==
@@ -929,6 +947,7 @@ class FbkDartListAndMapView extends StatefulWidget {
       },
     ];
 
+    // Tuliskan kode untuk menentukan rata-rata gaji dari semua employee dan tampung ke variable di bawah ini
     double? averageSalary;
 
     return averageSalary == 7500.0;
@@ -958,6 +977,7 @@ class FbkDartListAndMapView extends StatefulWidget {
       },
     ];
 
+    // Tuliskan kode untuk menentukan produk dengan harga termahal dan tampung ke variable di bawah ini
     Map<String, dynamic>? mostExpensiveProduct;
 
     return mostExpensiveProduct ==
@@ -988,6 +1008,7 @@ class FbkDartListAndMapView extends StatefulWidget {
       },
     ];
 
+    // Tuliskan kode untuk menentukan jumlah stok produk dan tampung ke variable di bawah ini
     int? totalStock;
 
     return totalStock == 37;
@@ -1038,6 +1059,7 @@ class FbkDartListAndMapView extends StatefulWidget {
       },
     ];
 
+    // Tuliskan kode untuk menentukan jumlah produk yang terjual dan tampung ke variable di bawah ini
     int? totalQty;
 
     return totalQty == 7;
@@ -1088,6 +1110,7 @@ class FbkDartListAndMapView extends StatefulWidget {
       },
     ];
 
+    // Tuliskan kode untuk menentukan jumlah total penjualan dan tampung ke variable di bawah ini
     double? totalSale;
 
     return totalSale == 325.0;
@@ -1155,6 +1178,7 @@ class FbkDartListAndMapView extends StatefulWidget {
       },
     ];
 
+    // Tuliskan kode untuk menentukan jumlah total penjualan order antara tanggal "2023-01-01" dan "2023-01-03" dan tampung ke variable di bawah ini
     double? totalSale;
 
     return totalSale == 250.0;
@@ -1222,6 +1246,7 @@ class FbkDartListAndMapView extends StatefulWidget {
       },
     ];
 
+    // Tuliskan kode untuk menentukan jumlah total penjualan order antara tanggal "2023-01-01" dan "2023-01-03" dan tampung ke variable di bawah ini
     double? totalSale;
 
     return totalSale == 250.0;
@@ -1301,6 +1326,7 @@ class FbkDartListAndMapView extends StatefulWidget {
       },
     ];
 
+    // Tuliskan kode untuk menentukan jumlah total penjualan obat pada tanggal "2023-01-01" dan tampung ke variable di bawah ini
     double? totalSale;
 
     return totalSale == 35000.0;
@@ -1319,6 +1345,7 @@ class FbkDartListAndMapView extends StatefulWidget {
       },
     };
 
+    // Tuliskan kode untuk mengakses wattage dari produk dan tampung ke variable di bawah ini
     int? wattage;
 
     return wattage == product["details"]["wattage"];
@@ -1338,6 +1365,7 @@ class FbkDartListAndMapView extends StatefulWidget {
       },
     };
 
+    // Tuliskan kode untuk mengakses email dari customer dan tampung ke variable di bawah ini
     String? email;
 
     return email == customer["email"];
@@ -1357,6 +1385,7 @@ class FbkDartListAndMapView extends StatefulWidget {
       },
     };
 
+    // Tuliskan kode untuk mengakses jumlah halaman dari buku dan tampung ke variable di bawah ini
     int? pages;
 
     return pages == book["details"]["pages"];

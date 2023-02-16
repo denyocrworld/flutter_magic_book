@@ -23,6 +23,7 @@ class HrUploadImageController extends State<HrUploadImageView>
   String? imageUrl;
   bool uploading = false;
   doUpload() async {
+    //1. ambil filenya
     FilePickerResult? result = await FilePicker.platform.pickFiles(
       type: FileType.custom,
       allowedExtensions: [
@@ -35,6 +36,8 @@ class HrUploadImageController extends State<HrUploadImageView>
     File file = File(result.files.single.path!);
     String filePath = file.path;
 
+    //2. upload file-nya
+    //dio_upload
     final formData = FormData.fromMap({
       'image': MultipartFile.fromBytes(
         File(filePath).readAsBytesSync(),

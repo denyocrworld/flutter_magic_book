@@ -7,6 +7,14 @@ class SmNavigationView extends StatefulWidget {
   Widget build(context, SmNavigationController controller) {
     controller.view = this;
 
+    /*
+   TODO: Implement this @ controller
+   int selectedIndex = 0;
+   updateIndex(int newIndex) {
+   selectedIndex = newIndex;
+   setState(() {});
+   }
+   */
     return Scaffold(
       appBar: AppBar(
         title: const Text("SmNavigation"),
