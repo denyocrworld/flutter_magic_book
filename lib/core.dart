@@ -375,6 +375,7 @@ export 'package:hyper_ui/module/online_class/flutter_book/fbk_main_navigation/co
 export 'package:hyper_ui/module/online_class/flutter_book/fbk_main_navigation/view/fbk_dart_exercise_view.dart';
 export 'package:hyper_ui/module/online_class/flutter_book/fbk_main_navigation/view/fbk_flutter_exercise.dart';
 export 'package:hyper_ui/module/online_class/flutter_book/fbk_main_navigation/view/fbk_form_view.dart';
+export 'package:hyper_ui/module/online_class/flutter_book/fbk_main_navigation/view/fbk_full_apps_exercise_view.dart';
 export 'package:hyper_ui/module/online_class/flutter_book/fbk_main_navigation/view/fbk_main_navigation_view.dart';
 export 'package:hyper_ui/module/online_class/flutter_book/fbk_main_navigation/view/fbk_ui_basic_view.dart';
 export 'package:hyper_ui/module/online_class/flutter_book/fbk_main_navigation/view/fbk_ui_pro_view.dart.dart';
@@ -470,7 +471,7 @@ export 'package:hyper_ui/module/online_class/oc_state_management/sm_visibility/c
 export 'package:hyper_ui/module/online_class/oc_state_management/sm_visibility/view/sm_visibility_view.dart';
 export 'package:hyper_ui/service/auth_service/auth_service.dart';
 export 'package:hyper_ui/service/dummy_service/dummy_service.dart';
-export 'package:hyper_ui/service/main_storage/main_storage.dart';
+export 'package:hyper_ui/service/main_storage_service/main_storage.dart';
 export 'package:hyper_ui/service/product_service/product_service.dart';
 export 'package:hyper_ui/setup.dart';
 export 'package:hyper_ui/shared/theme/theme.dart';
@@ -508,6 +509,7 @@ export 'package:hyper_ui/shared/widget/form/location_picker/map_viewer.dart';
 export 'package:hyper_ui/shared/widget/form/memo_field/memo_field.dart';
 export 'package:hyper_ui/shared/widget/form/number_field/numberfield.dart';
 export 'package:hyper_ui/shared/widget/form/radio/radio.dart';
+export 'package:hyper_ui/shared/widget/form/rating/rating_field.dart';
 export 'package:hyper_ui/shared/widget/form/switch/switch.dart';
 export 'package:hyper_ui/shared/widget/form/textfield/text_field.dart';
 export 'package:hyper_ui/shared/widget/form/time_picker/timepicker.dart';

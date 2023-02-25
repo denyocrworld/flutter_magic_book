@@ -1,14 +1,16 @@
-import 'package:hyper_ui/state_util.dart';
 import 'package:hyper_ui/core.dart';
 import 'package:flutter/material.dart';
 import 'package:hyper_ui/debug.dart';
 
+/*
+! FLASH SALE !
+! HARGA SPESIAL HANYA HARI INI!
+KELAS ONLINE /w DENYOCR
+? BUKA CAPEKNGODING.COM
+*/
 void main() async {
   await initialize();
-  /*
-  ? Kelas Online Flutter
-  ? Buka capekngoding.com
-  */
+
   // Get.mainTheme.value = getDefaultTheme();
   Get.mainTheme.value = getDarkTheme();
   runMainApp();
@@ -32,6 +34,8 @@ class MainApp extends StatelessWidget {
           debugShowCheckedModeBanner: false,
           theme: value,
           home: const FbkMainNavigationView(),
+          // home: const UserListView(),
+          // home: const CgListCheckerView(),
           // home: const ContohView(),
           // home: const TutorialListView(),
           // home: const MainNavigationView(),

@@ -14,13 +14,14 @@ class ExLocationPickerMapView extends StatefulWidget {
   final double? latitude;
   final double? longitude;
   final bool enableEdit;
-
+  final Function(double latitude, double longitude) onChanged;
   const ExLocationPickerMapView({
     Key? key,
     required this.id,
     required this.enableEdit,
     this.latitude,
     this.longitude,
+    required this.onChanged,
   }) : super(key: key);
 
   @override
@@ -35,6 +36,7 @@ class _ExLocationPickerMapViewState extends State<ExLocationPickerMapView> {
       id: widget.id,
       latitude: widget.latitude,
       longitude: widget.longitude,
+      onChanged: widget.onChanged,
     );
   }
 }
@@ -46,6 +48,7 @@ class LocationPickerMap extends StatefulWidget {
   final double zoom;
   final bool enableMyLocationFeature;
   final bool enableEdit;
+  final Function(double latitude, double longitude) onChanged;
 
   const LocationPickerMap({
     Key? key,
@@ -55,6 +58,7 @@ class LocationPickerMap extends StatefulWidget {
     this.longitude,
     this.zoom = 16,
     this.enableMyLocationFeature = true,
+    required this.onChanged,
   }) : super(key: key);
 
   @override
@@ -303,6 +307,9 @@ class LocationPickerMapState extends State<LocationPickerMap> {
                                         currentLongitude);
 
                                     Navigator.pop(context);
+
+                                    widget.onChanged(
+                                        currentLatitude, currentLongitude);
                                   },
                                 ),
                               ),

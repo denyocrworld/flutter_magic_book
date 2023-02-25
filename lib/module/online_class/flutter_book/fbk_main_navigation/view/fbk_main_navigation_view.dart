@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hyper_ui/core.dart';
-
-import 'fbk_ui_pro_view.dart.dart';
+import 'package:hyper_ui/module/online_class/flutter_book/fbk_main_navigation/view/fbk_full_apps_exercise_view.dart';
 
 class FbkMainNavigationView extends StatefulWidget {
   const FbkMainNavigationView({Key? key}) : super(key: key);
@@ -14,7 +13,7 @@ class FbkMainNavigationView extends StatefulWidget {
     }
 
     return DefaultTabController(
-      length: 4,
+      length: 5,
       child: Scaffold(
         appBar: AppBar(
           bottom: const TabBar(
@@ -36,6 +35,9 @@ class FbkMainNavigationView extends StatefulWidget {
               Tab(
                 text: "UI Pro",
               ),
+              Tab(
+                text: "Full Apps Exercise",
+              ),
             ],
           ),
           title: const Text('Flutter Magic Book'),
@@ -46,6 +48,7 @@ class FbkMainNavigationView extends StatefulWidget {
             FbkFlutterExerciseView(),
             FbkUIBasicExerciseView(),
             FbkUIProExerciseView(),
+            FbkFullAppsExerciseView(),
           ],
         ),
       ),

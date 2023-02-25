@@ -58,6 +58,7 @@ class _QTextFieldState extends State<QTextField> implements InputControlState {
     textEditingController.text = "";
   }
 
+  @override
   focus() {
     focusNode.requestFocus();
   }

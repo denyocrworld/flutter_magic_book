@@ -62,42 +62,6 @@ Future showInfoDialog(String message) async {
               .shake(),
         ),
       );
-      return AlertDialog(
-        title: const Text('Info')
-            .animate(
-              delay: 900.ms,
-            )
-            .fade()
-            .shake(),
-        content: SingleChildScrollView(
-          child: ListBody(
-            children: <Widget>[
-              Text(message)
-                  .animate(
-                    delay: 900.ms,
-                  )
-                  .fade()
-                  .shake(),
-            ],
-          )
-              .animate(
-                delay: 900.ms,
-              )
-              .fade()
-              .shake(),
-        ),
-        actions: <Widget>[
-          ElevatedButton(
-            style: ElevatedButton.styleFrom(
-              backgroundColor: Colors.blueGrey,
-            ),
-            onPressed: () {
-              Navigator.pop(context);
-            },
-            child: const Text("Ok"),
-          ),
-        ],
-      );
     },
   );
 }

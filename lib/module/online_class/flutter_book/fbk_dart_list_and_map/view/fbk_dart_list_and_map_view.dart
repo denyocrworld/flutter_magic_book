@@ -160,7 +160,7 @@ class FbkDartListAndMapView extends StatefulWidget {
       {"name": "Jake", "salary": 8000},
       {"name": "Jerry", "salary": 9000},
     ];
-    //Tulis kode untuk menentukan apakah ada karyawan yang memiliki gaji di atas 9000
+    //Tulis kode untuk menentukan apakah ada karyawan yang memiliki gaji di sama dengan atau lebih dari 9000
     bool? result;
     return result == true;
   }
@@ -444,7 +444,7 @@ class FbkDartListAndMapView extends StatefulWidget {
     ];
     //Tulis kode untuk menentukan berapa banyak karyawan dengan gaji di atas 4000
     int? employeesAboveSalary;
-    return employeesAboveSalary == 2;
+    return employeesAboveSalary == 1;
   }
 
   bool exercise45() {

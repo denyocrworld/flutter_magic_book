@@ -2,6 +2,7 @@ import 'package:dio/dio.dart';
 
 class AuthService {
   static String? token;
+  static String role = "";
   static Future<Map> doLogin({
     required String email,
     required String password,
