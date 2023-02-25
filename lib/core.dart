@@ -5,6 +5,24 @@ it means you have to rename it to something more unique.
 */
 export 'package:hyper_ui/config.dart';
 export 'package:hyper_ui/core_package.dart';
+export 'package:hyper_ui/module/app/food_delivery/admin/fd_admin_main_navigation/controller/fd_admin_main_navigation_controller.dart';
+export 'package:hyper_ui/module/app/food_delivery/admin/fd_admin_main_navigation/view/fd_admin_main_navigation_view.dart';
+export 'package:hyper_ui/module/app/food_delivery/auth/fd_login/controller/fd_login_controller.dart';
+export 'package:hyper_ui/module/app/food_delivery/auth/fd_login/view/fd_login_view.dart';
+export 'package:hyper_ui/module/app/food_delivery/customer/fd_customer_dashboard/controller/fd_customer_dashboard_controller.dart';
+export 'package:hyper_ui/module/app/food_delivery/customer/fd_customer_dashboard/view/fd_customer_dashboard_view.dart';
+export 'package:hyper_ui/module/app/food_delivery/customer/fd_customer_main_navigation/controller/fd_customer_main_navigation_controller.dart';
+export 'package:hyper_ui/module/app/food_delivery/customer/fd_customer_main_navigation/view/fd_customer_main_navigation_view.dart';
+export 'package:hyper_ui/module/app/food_delivery/driver/fd_driver_main_navigation/controller/fd_driver_main_navigation_controller.dart';
+export 'package:hyper_ui/module/app/food_delivery/driver/fd_driver_main_navigation/view/fd_driver_main_navigation_view.dart';
+export 'package:hyper_ui/module/app/food_delivery/fd_profile/controller/fd_profile_controller.dart';
+export 'package:hyper_ui/module/app/food_delivery/fd_profile/view/fd_profile_view.dart';
+export 'package:hyper_ui/module/app/food_delivery/restaurant/fd_restaurant_main_navigation/controller/fd_restaurant_main_navigation_controller.dart';
+export 'package:hyper_ui/module/app/food_delivery/restaurant/fd_restaurant_main_navigation/view/fd_restaurant_main_navigation_view.dart';
+export 'package:hyper_ui/module/app/food_delivery/restaurant/fd_restaurant_product_form/controller/fd_restaurant_product_form_controller.dart';
+export 'package:hyper_ui/module/app/food_delivery/restaurant/fd_restaurant_product_form/view/fd_restaurant_product_form_view.dart';
+export 'package:hyper_ui/module/app/food_delivery/restaurant/fd_restaurant_product_list/controller/fd_restaurant_product_list_controller.dart';
+export 'package:hyper_ui/module/app/food_delivery/restaurant/fd_restaurant_product_list/view/fd_restaurant_product_list_view.dart';
 export 'package:hyper_ui/module/online_class/execises/oce_dart_basic/controller/oce_dart_basic_controller.dart';
 export 'package:hyper_ui/module/online_class/execises/oce_dart_basic/view/oce_dart_basic_view.dart';
 export 'package:hyper_ui/module/online_class/execises/oce_dart_certification/controller/oce_dart_certification_controller.dart';
