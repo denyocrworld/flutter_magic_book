@@ -18,7 +18,6 @@ dependencies:
   google_fonts: ^3.0.1
   material_design_icons_flutter: ^5.0.6996
   image_picker: ^0.8.5+3
-  dio: ^4.0.6
   file_picker: ^5.2.2
   uuid: ^3.0.6
   flutter_image_compress: ^1.1.3
@@ -45,7 +44,7 @@ dependencies:
   flutter_animate: ^3.1.0
   firebase_messaging: ^14.2.5
   flutter_local_notifications: ^8.2.0
-  
+  dio: ^5.0.1
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -59,4 +58,4 @@ flutter:
     - assets/icon/
     - assets/font/
     - assets/icon/
-    - assets/image/
+    - assets/image/
