@@ -15,7 +15,7 @@ void main() async {
 }
 
 runMainApp() async {
-  return runApp(const MainApp());
+  return runApp(MainApp());
 }
 
 class MainApp extends StatelessWidget {
