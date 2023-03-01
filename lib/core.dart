@@ -5,6 +5,10 @@ it means you have to rename it to something more unique.
 */
 export 'package:hyper_ui/config.dart';
 export 'package:hyper_ui/core_package.dart';
+export 'package:hyper_ui/model/product/product/product.dart';
+export 'package:hyper_ui/model/product/product/product.freezed.dart';
+export 'package:hyper_ui/model/product/product/product.g.dart';
+export 'package:hyper_ui/model/product.dart';
 export 'package:hyper_ui/module/app/car_rental/cr_car_detail/controller/cr_car_detail_controller.dart';
 export 'package:hyper_ui/module/app/car_rental/cr_car_detail/view/cr_car_detail_view.dart';
 export 'package:hyper_ui/module/app/car_rental/cr_dashboard/controller/cr_dashboard_controller.dart';
@@ -451,6 +455,12 @@ export 'package:hyper_ui/module/online_class/oc_firebase/view/oc_firebase_view.d
 export 'package:hyper_ui/module/online_class/oc_form/controller/oc_form_controller.dart';
 export 'package:hyper_ui/module/online_class/oc_form/view/oc_form_view.dart';
 export 'package:hyper_ui/module/online_class/oc_http_request/controller/oc_http_request_controller.dart';
+export 'package:hyper_ui/module/online_class/oc_http_request/oc_http_dashboard/controller/oc_http_dashboard_controller.dart';
+export 'package:hyper_ui/module/online_class/oc_http_request/oc_http_dashboard/view/oc_http_dashboard_view.dart';
+export 'package:hyper_ui/module/online_class/oc_http_request/oc_http_product_detail/controller/oc_http_product_detail_controller.dart';
+export 'package:hyper_ui/module/online_class/oc_http_request/oc_http_product_detail/view/oc_http_product_detail_view.dart';
+export 'package:hyper_ui/module/online_class/oc_http_request/oc_http_product_list/controller/oc_http_product_list_controller.dart';
+export 'package:hyper_ui/module/online_class/oc_http_request/oc_http_product_list/view/oc_http_product_list_view.dart';
 export 'package:hyper_ui/module/online_class/oc_http_request/view/oc_http_request_view.dart';
 export 'package:hyper_ui/module/online_class/oc_state_management/oc_state_management_main_navigation/controller/oc_state_management_main_navigation_controller.dart';
 export 'package:hyper_ui/module/online_class/oc_state_management/oc_state_management_main_navigation/view/oc_state_management_main_navigation_view.dart';
@@ -496,7 +506,9 @@ export 'package:hyper_ui/module/online_class/oc_state_management/sm_visibility/v
 export 'package:hyper_ui/service/auth_service/auth_service.dart';
 export 'package:hyper_ui/service/dummy_service/dummy_service.dart';
 export 'package:hyper_ui/service/main_storage_service/main_storage.dart';
+export 'package:hyper_ui/service/old_product_service/old_product_service.dart';
 export 'package:hyper_ui/service/product_service/product_service.dart';
+export 'package:hyper_ui/service/product_service/product_upload_service.dart';
 export 'package:hyper_ui/setup.dart';
 export 'package:hyper_ui/shared/theme/theme.dart';
 export 'package:hyper_ui/shared/theme/theme_config.dart';

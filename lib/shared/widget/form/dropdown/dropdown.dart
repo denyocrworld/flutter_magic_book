@@ -48,7 +48,7 @@ class _QDropdownFieldState extends State<QDropdownField> {
       items.add(item);
     }
 
-    var values = widget.items.where((i) => i["id"] == widget.value).toList();
+    var values = widget.items.where((i) => i["value"] == widget.value).toList();
     if (values.isNotEmpty) {
       selectedValue = values.first;
     }

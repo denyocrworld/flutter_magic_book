@@ -8,6 +8,7 @@ class QTextField extends StatefulWidget {
   final String? hint;
   final String? Function(String?)? validator;
   final bool obscure;
+  final bool enabled;
   final int? maxLength;
   final IconData? prefixIcon;
   final IconData? suffixIcon;
@@ -25,6 +26,7 @@ class QTextField extends StatefulWidget {
     required this.onChanged,
     this.onSubmitted,
     this.obscure = false,
+    this.enabled = true,
     this.prefixIcon,
     this.suffixIcon,
   }) : super(key: key);
@@ -68,6 +70,7 @@ class _QTextFieldState extends State<QTextField> implements InputControlState {
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      enabled: widget.enabled,
       controller: textEditingController,
       focusNode: focusNode,
       validator: widget.validator,

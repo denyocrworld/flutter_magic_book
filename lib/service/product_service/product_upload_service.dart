@@ -1,0 +1,3 @@
+class ProductUploadService {
+  uploadImageFile() async {}
+}

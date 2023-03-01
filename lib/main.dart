@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:hyper_ui/debug.dart';
 
 /*
-Kelas Online /w DenyOcr
-? Buka capekngoding.com
+Kelas Online /w Deny Ocr
+Buka: capekngoding.com
 */
 void main() async {
   await initialize();
@@ -15,7 +15,7 @@ void main() async {
 }
 
 runMainApp() async {
-  return runApp(MainApp());
+  return runApp(const MainApp());
 }
 
 class MainApp extends StatelessWidget {
