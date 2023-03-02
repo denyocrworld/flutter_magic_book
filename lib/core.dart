@@ -5,10 +5,6 @@ it means you have to rename it to something more unique.
 */
 export 'package:hyper_ui/config.dart';
 export 'package:hyper_ui/core_package.dart';
-export 'package:hyper_ui/model/product/product/product.dart';
-export 'package:hyper_ui/model/product/product/product.freezed.dart';
-export 'package:hyper_ui/model/product/product/product.g.dart';
-export 'package:hyper_ui/model/product.dart';
 export 'package:hyper_ui/module/app/car_rental/cr_car_detail/controller/cr_car_detail_controller.dart';
 export 'package:hyper_ui/module/app/car_rental/cr_car_detail/view/cr_car_detail_view.dart';
 export 'package:hyper_ui/module/app/car_rental/cr_dashboard/controller/cr_dashboard_controller.dart';

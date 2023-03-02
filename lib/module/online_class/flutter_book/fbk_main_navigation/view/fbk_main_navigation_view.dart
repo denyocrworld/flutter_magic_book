@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:hyper_ui/core.dart';
-import 'package:hyper_ui/module/online_class/flutter_book/fbk_main_navigation/view/fbk_full_apps_exercise_view.dart';
 
 class FbkMainNavigationView extends StatefulWidget {
   const FbkMainNavigationView({Key? key}) : super(key: key);

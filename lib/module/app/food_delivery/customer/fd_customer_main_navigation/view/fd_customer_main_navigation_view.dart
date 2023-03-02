@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:hyper_ui/core.dart';
-import '../controller/fd_customer_main_navigation_controller.dart';
 
 class FdCustomerMainNavigationView extends StatefulWidget {
   const FdCustomerMainNavigationView({Key? key}) : super(key: key);

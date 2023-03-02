@@ -3,8 +3,6 @@
 import 'package:flutter/material.dart';
 import 'package:hyper_ui/core.dart';
 
-import '../widget/get_grid.dart';
-
 class FbkUIBasicExerciseView extends StatelessWidget {
   const FbkUIBasicExerciseView({Key? key}) : super(key: key);
 
