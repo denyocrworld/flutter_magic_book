@@ -521,7 +521,6 @@ export 'package:hyper_ui/shared/util/platform_extension/platform_extension.dart'
 export 'package:hyper_ui/shared/util/random_image/random_image.dart';
 export 'package:hyper_ui/shared/util/responsive/responsive.dart';
 export 'package:hyper_ui/shared/util/show_loading/show_loading.dart';
-export 'package:hyper_ui/shared/util/show_qrcode_scanner/show_qrcode_scanner.dart';
 export 'package:hyper_ui/shared/util/show_snackbar/show_snackbar.dart';
 export 'package:hyper_ui/shared/util/string_extension/string_extension.dart';
 export 'package:hyper_ui/shared/util/url_launcher/url_launcher.dart';

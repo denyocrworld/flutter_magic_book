@@ -38,7 +38,6 @@ dependencies:
   faker_dart: ^0.1.11
   syncfusion_flutter_charts: ^20.3.58
   bitsdojo_window: ^0.1.5
-  mobile_scanner: ^2.1.0
   qr_flutter: ^4.0.0
   path_provider: ^2.0.11
   flutter_animate: ^3.1.0
@@ -58,4 +57,4 @@ flutter:
     - assets/icon/
     - assets/font/
     - assets/icon/
-    - assets/image/
+    - assets/image/
